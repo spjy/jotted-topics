@@ -1,6 +1,11 @@
+---
+header: Kubernetes
+description: Orchestrated container management and deployment.
+---
+
 # Kubernetes (K8s)
 
-Kubernetes is a comprehensive system that handles the management and deployment of containerized applications (i.e. [Docker containers]()). It can handle aspects such as load balancing, networking, scaling and even CI/CD. 
+Kubernetes is a comprehensive system that handles the management and deployment of containerized applications (i.e. [Docker containers]()). It can handle aspects such as clustering, scheduling, load balancing, networking, scaling and even CI/CD. 
 
 ## Kubernetes Jargon
 
