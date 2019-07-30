@@ -127,3 +127,42 @@ $$\sum_{n=1}^N i_n=0$$
 The sum of voltages around a loop is zero.
 
 $$\sum_{m=1}^M v_m=0$$
+
+# Equivilent Resistance
+
+#### Series Resistance Addition
+For resistors in series, the equivilent resistance is merely the sum of each resistance. For $n$ resistors in series:
+
+$$R_{eq}=\sum_{n=1}^N R_n$$
+
+#### Parallel Resistance Addition
+For resistors in parallel, the equivilent resistance is the product of each resistance divided by their sum. For $n$ resistors in parallel:
+
+$$\frac{1}{R_{eq}}=\frac{1}{R_{1}} + \frac{1}{R_{2}} + \ldots + \frac{1}{R_{n}}$$
+
+# Voltage Division
+For $N$ resistors in series with a source voltage $v$, the $n$th resistor has the voltage drop of:
+
+$$\displaystyle v_n=\frac{R_n}{R_1+R_2+\ldots+R_N} v$$
+
+# Current Division
+For two resistors in parallel attached to a current source $i$, the current over resistor $R_1$ is:
+
+$$\displaystyle i_1=\frac{R_2 \text{ } i}{R_1+R_2}$$
+
+# Wye-Delta Transformations
+Resistors can appear to not be in a parallel or series configuration. Wye-Delta ($Y-\Delta$) transformations solve this issue of combining resistors when this situation arises.
+
+A $Y$ resistor configuration can be re-arranged into a $\Pi$ resistor configuration, while the $\Delta$ resistor configuration can be re-arranged to look like a $T$. This is called the $\Pi-T$ configuration.
+
+For a $\Delta \rightarrow Y$ transformation:
+
+$$R_1=\frac{R_b R_c}{R_a+R_b+R_c}$$
+$$R_2=\frac{R_c R_a}{R_a+R_b+R_c}$$
+$$R_3=\frac{R_a R_b}{R_a+R_b+R_c}$$
+
+For a $Y \rightarrow \Delta$ transformation:
+
+$$R_a = \frac{R_1R_2+R_2R_3+R_3R_1}{R_1}$$
+$$R_b = \frac{R_1R_2+R_2R_3+R_3R_1}{R_2}$$
+$$R_c = \frac{R_1R_2+R_2R_3+R_3R_1}{R_3}$$
