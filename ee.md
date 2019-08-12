@@ -15,6 +15,9 @@ Note:
 3. The law of conservation of charge states charge cannot be created or destroyed.
 
 # Current (i)
+| Variable | Unit      | SI Unit          |
+| -------- | --------- | ---------------- | 
+| i        | ampere (A) | $\displaystyle \frac{\text{coulomb}}{\text{second}} \text{}$ |
 
 Current is the time rate of change of charge and is represented as the variable $i$. Its unit of measurement is denoted as amperes (A). An ampere is equivilent to a $\text{coulomb / second}$.
 
@@ -26,15 +29,15 @@ $$q = \int_{t_0}^t i \text{ } dt$$
 
 ## Types of Currents
 
-#### Direct Current (DC)
-
-DC current is one that flows in only one direction.
-
-#### Alternating Current (AC)
-
-AC current is one that changes direction with respect to time.
+| Current Type        | Abbreviation | Description                                                     |
+| ------------------- | ------------ | --------------------------------------------------------------- |
+| Direct Current      | DC           | Current that flows in only one direction.                        |
+| Alternating Current | AC           | Current that changes direction constantly with respect to time. |
 
 # Voltage (v)
+| Variable | Unit     | SI Unit                               |
+| -------- | -------- | ------------------------------------- | 
+| v        | volt (V) | $\displaystyle \frac{\text{newton} \cdot \text{meter}}{\text{second}} \text{}$ |
 
 Voltage is the potential difference between two points and is reepreseented as the variable $v$. In other words, it is the energy required to move from one point $a$ to another point $b$. Its unit of measurement is denoted as volts (V). A volt is equivilent to a $\text{joule / coulomb}$ or a $\text{newton} \cdot \text{meter / coulomb}$. Voltage is denoted as change in work over the change in charge:
 
@@ -44,12 +47,13 @@ This means that a volt would deliver one joule of energy when one coulomb passes
 
 # Power (p)
 
+| Variable | Unit     | SI Unit        |
+| -------- | -------- | -------------- | 
+| p        | watt (W) | $\displaystyle \frac{\text{joule}}{\text{second}} \text{}$ |
+
 Power is the time rate of expending or absorbing energy and is represented as the variable $p$. Its unit of measurement is denoted as watts (W). A watt is equivilent to one $\text{joule / second}$.
 
 $$p=\frac{dw}{dt}=vi$$
-
-Conversely, we can calculate the energy absorbed:
-
 $$w=\int_{t_0}^t p \text{ } dt = \int_{t_0}^t vi \text{ } dt$$
 
 Note:
@@ -145,13 +149,31 @@ For $N$ resistors in series with a source voltage $v$, the $n$th resistor has th
 
 $$\displaystyle v_n=\frac{R_n}{R_1+R_2+\ldots+R_N} v$$
 
+![voltage-division](/ee/voltage-division.svg)
+
 # Current Division
 For two resistors in parallel attached to a current source $i$, the current over resistor $R_1$ is:
 
-$$\displaystyle i_1=\frac{R_2 \text{ } i}{R_1+R_2}$$
+$$\displaystyle i_1=\frac{R_n \text{ }}{R_1+R_2 + \ldots + R_N} i$$
+
+![current-division](/ee/current-division.svg)
 
 # Wye-Delta Transformations
-Resistors can appear to not be in a parallel or series configuration. Wye-Delta ($Y-\Delta$) transformations solve this issue of combining resistors when this situation arises.
+Resistors can appear in configuration that is not in parallel or series. Wye-Delta ($Y-\Delta$) transformations solve this issue of combining resistors when this situation arises.
+
+$Y$ / $T$ configuration:
+
+![wye](/ee/wye.svg)
+![T](/ee/T.svg)
+
+$$R_{12}(Y)=R_1+R_3$$
+
+$\Delta$ / $\Pi$  configuration:
+
+![delta](/ee/delta.svg)
+![pi](/ee/pi.svg)
+
+$$R_{12}(\Delta)=R_b || (R_a+R_c)$$
 
 A $Y$ resistor configuration can be re-arranged into a $\Pi$ resistor configuration, while the $\Delta$ resistor configuration can be re-arranged to look like a $T$. This is called the $\Pi-T$ configuration.
 
@@ -166,3 +188,42 @@ For a $Y \rightarrow \Delta$ transformation:
 $$R_a = \frac{R_1R_2+R_2R_3+R_3R_1}{R_1}$$
 $$R_b = \frac{R_1R_2+R_2R_3+R_3R_1}{R_2}$$
 $$R_c = \frac{R_1R_2+R_2R_3+R_3R_1}{R_3}$$
+
+# Circuit Analysis Techniques
+
+#### Nodal Analysis
+Use Kirchhoff's Current Law at a node.
+
+#### Mesh Analysis
+Use Kirchhoff's Voltage Law around a loop.
+
+#### Linearity
+
+To be $\text{linear}$ means it follows the superposition principle:
+1. *Additivity*: $f(x_1+x_2) = f(x_1)+f(x_2)$
+2. *Homogeneity (scaling)*: $f(ax) = af(x)$
+
+Resistors are said to be linear because it is directly proportional to its input through ohms law, $v=iR$.
+
+#### Superposition
+
+In a linear circuit, the voltage or current through an element is the sum of the voltage or current through an element due to each independent source acting alone.
+
+1. Turn off all independent sources except one. Find the voltage or current as a result of the active source.
+2. For all of the other independent sources, repeat step one (1).
+3. Sum the voltages or currents of the element due to each independent source acting alone.
+
+#### Source Transformations
+
+In a configuration when a voltage source is in series with a resistor, we can transform the said configuration into a current source in parallel with a resistor and vice versa.
+
+Dependent sources can transform between each other, and likewise independent sources can transform between each other. However, the two source types cannot be interchanged (e.g. dependent sources cannot transform into independent sources).
+
+Source transformation are related by Ohm's law:
+
+$$v=iR$$
+$$i=\frac{R}{v}$$
+
+![independent-source-transformation](/ee/independent-source-transformation.svg)
+
+![dependent-source-transformation](/ee/dependent-source-transformation.svg)
