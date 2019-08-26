@@ -53,7 +53,7 @@ $$\left\{ x \in \mathbb{R} \mid 10 \le x \le 15 \right\} = \left\{10, 11, 12, 13
 
 ### Subset
 
-Let $A$ and $B$ be sets. If $A$ is a **subset** of $B$, or $A \subseteq B$, then each element of $A$ is also an element of $B$.
+Let $A$ and $B$ be sets. If $A$ is a subset of $B$, or $A \subseteq B$, then each element of $A$ is also an element of $B$.
 
 | Notation         | Translation |
 ------------------ | ----------- |
@@ -77,3 +77,30 @@ $$A = \left\{ 1,2,3 \right\}$$
 $$B = \left\{ 1,2,4 \right\}$$
 
 $A \subsetneq B$ because the element $3$ in $A$ does not exist in $B$.
+
+### Proper Subset
+
+Let $A$ and $B$ be sets. If $A$ is a proper subset of $B$, then each element of $A$ is in $B$; however, there is at least one element of $B$ not in $A$.
+
+In other words, $A$ cannot equal $B$. There must be at least one element that differs between the two sets.
+
+### Ordered Pair
+
+Let $a$ and $b$ be elements. $(a, b)$ is an ordered pair with $a$ and $b$ together such that $a$ is the first element of the pair and $b$ is the second. 
+
+Let $c$ and $d$ be two other elements. 
+
+$(a, b)$ = $(c, d)$ is true if $a=c$ and $b=d$.
+
+### Cartesian Product
+
+Let $A$ and $B$ be sets. The Cartesian product of $A$ and $B$, or $A \times B$, is the set of all ordered pairs $(a, b)$ such that $a \in B$ and $b \in B$.
+
+$$A \times B = \left\{ (a, b) \mid a \in A, b \in B \right\}$$
+
+
+#### Cartesian Product Example
+
+Let $A = \left\{ 1, 2 \right\}$ and $\left\{ 3, 4 \right\}$. The Cartesian product of $A$ and $B$ is:
+
+$A \times B = \left\{ (1, 2), (1, 4), (2, 3), (2, 4) \right\} \text{}$
