@@ -95,6 +95,8 @@ Let $c$ and $d$ be two other elements, and let $(c, d)$ be another ordered pair.
 
 $(a, b)$ = $(c, d)$ is true if $a=c$ and $b=d$.
 
+# Relations and Functions
+
 ### Cartesian Product
 
 - Let $A$ and $B$ be sets.
@@ -108,15 +110,63 @@ Let $A = \left\{ 1, 2 \right\}$ and $\left\{ 3, 4 \right\}$. The Cartesian produ
 
 $$A \times B = \left\{ (1, 2), (1, 4), (2, 3), (2, 4) \right\} \text{}$$
 
-#### Relationships
+### Relationships
+
+A relationship is the connection between two different things.
 
 - Let $A$ and $B$ be sets.
-- A relation $R$ from $A$ to $B$ is a subset of $A \times B$ ($R \subseteq A \times B$).
+- A relation set $R$ from $A$ to $B$ is a subset of $A \times B$ ($R \subseteq A \times B$).
 
 Now we can say:
 
-- An ordered pair $(x, y) \in A \times B$, $x$ is related to $y$ by $R$, or $x$ $R$ $y$, iff $(x, y) \in R$.
+- An ordered pair $(x, y) \in A \times B$, we can state $x$ is related to $y$ by $R$, or $x$ $R$ $y$ iff $(x, y) \in R$.
 - $A$ is the domain of $R$ and $B$ is the co-domain.
 - $x$ $R$ $y$ means $(x,y) \in R$.
 - $x$ $\not{R}$ $y$ means $(x,y) \not\in R$.
+
+### Functions
+
+A function $F$ from a set $A$ to set $B$ is the relationship between the domain $A$ and co-domain $B$. It has the restrictions that:
+
+- $\forall x \in A, \exists y \in B \mid (x,y) \in F$
+- $\forall x \in A$ and $y,z \in B$, if $(x, y) \in F$ and $(x,z) \in F \implies y=z$
+
+In other words, for each $x$ in the domain, there exists a value for $x$ in the co-domain. Additionally, each element $x$ in the domain may map to exactly one value $y$ in the co-domain.
+
+#### Function Notation
+
+If $A$ and $B$ are sets and $F$ is a function from $A$ to $B$, then given any element $x \in A$, the unique element in $B$ that is related to $x$ by $F$ is $F(x)$, read as F of x.
+
+#### Function Mapping Notation
+
+Let $A$ and $B$ be sets and $f$ be a function. If $x \in A$ and $y \in B$, a function $f: A \rightarrow B$ is defined by $f: x \mapsto y$ means $f(x) = y$, the domain is defined on the set $A$ and the co-domain is defined on the set $B$.
+
+# Logic of Compound Statements
+
+### Symbols
+
+| Symbol | Meaning           |
+| ------ | ----------------- |
+| ~      | negation (not)    |
+| ∧      | conjunction (and) |
+| ∨      | disjunction (or)  |
+
+### Structure
+
+A compound statement is composed of:
+
+- **Premises**: Statements.
+- **Conclusions**: An assertion based on premises.
+
+It usually takes the form of: 
+
+If $p$ or $q$, then $r$. $q$. Therefore, $r$.
+
+### Statements
+
+A statement is a sentence that is true or false but not both.
+
+### Compound Statements
+
+
 
