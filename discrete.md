@@ -245,13 +245,21 @@ $p \lor \lnot p$ is the definition of a tautology. All interpretations are true.
 
 $p \land \lnot p$ is the definition of a contradiction. All interpretations are false.
 
-### Conditional Statements
+# Conditional Statements
 
 A conditional statement has the form: If $p$ then $q$. More formally, the notation is $p \rightarrow q$, which means $p$ implies $q$.
 
 The truthfulness of $q$ is dependent on the statement of $p$.
 
-#### Conditional Statement Truth Table
+### Hypothesis (Antecedent)
+
+The if statement ($p$).
+
+### Conclusion (Consequent)
+
+The then statement ($q$).
+
+### Conditional Statement Truth Table
 
 | $p$ | $q$ | $p \rightarrow q$ |
 | - | - | - |
@@ -259,3 +267,15 @@ The truthfulness of $q$ is dependent on the statement of $p$.
 | T | F | F |
 | F | T | T |
 | F | F | T |
+
+### Vacuously True
+
+An if statement is vacuously true (true by default) if the hypothesis is false.
+
+### Negation of Conditional Statement
+
+$$\lnot (p \rightarrow q) \equiv p \land \lnot q$$
+
+### Contrapositive of Conditional Statement
+
+$$p \rightarrow q \equiv \lnot q \rightarrow \lnot p$$
