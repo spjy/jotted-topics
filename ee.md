@@ -19,7 +19,7 @@ Note:
 | -------- | --------- | ---------------- | 
 | i        | ampere (A) | $\displaystyle \frac{\text{coulomb}}{\text{second}} \text{}$ |
 
-Current is the time rate of change of charge and is represented as the variable $i$. Its unit of measurement is denoted as amperes (A). An ampere is equivilent to a $\text{coulomb / second}$.
+Current is the time rate of change of charge and is represented as the variable $i$. Its unit of measurement is denoted as amperes (A). An ampere is equivalent to a $\text{coulomb / second}$.
 
 $$i = \frac{dq}{dt}$$
 
@@ -39,7 +39,7 @@ $$q = \int_{t_0}^t i \text{ } dt$$
 | -------- | -------- | ------------------------------------- | 
 | v        | volt (V) | $\displaystyle \frac{\text{newton} \cdot \text{meter}}{\text{second}} \text{}$ |
 
-Voltage is the potential difference between two points and is reepreseented as the variable $v$. In other words, it is the energy required to move from one point $a$ to another point $b$. Its unit of measurement is denoted as volts (V). A volt is equivilent to a $\text{joule / coulomb}$ or a $\text{newton} \cdot \text{meter / coulomb}$. Voltage is denoted as change in work over the change in charge:
+Voltage is the potential difference between two points and is represented as the variable $v$. In other words, it is the energy required to move from one point $a$ to another point $b$. Its unit of measurement is denoted as volts (V). A volt is equivalent to a $\text{joule / coulomb}$ or a $\text{newton} \cdot \text{meter / coulomb}$. Voltage is denoted as change in work over the change in charge:
 
 $$v_{ab} = \frac{dw}{dq}$$
 
@@ -51,7 +51,7 @@ This means that a volt would deliver one joule of energy when one coulomb passes
 | -------- | -------- | -------------- | 
 | p        | watt (W) | $\displaystyle \frac{\text{joule}}{\text{second}} \text{}$ |
 
-Power is the time rate of expending or absorbing energy and is represented as the variable $p$. Its unit of measurement is denoted as watts (W). A watt is equivilent to one $\text{joule / second}$.
+Power is the time rate of expending or absorbing energy and is represented as the variable $p$. Its unit of measurement is denoted as watts (W). A watt is equivalent to one $\text{joule / second}$.
 
 $$p=\frac{dw}{dt}=vi$$
 $$w=\int_{t_0}^t p \text{ } dt = \int_{t_0}^t vi \text{ } dt$$
@@ -86,7 +86,7 @@ An ideal independent source is an active circuit element that provides a pre-det
 An ideal dependent source is an active circuit element where the voltage or current is determined by its surrounding circuit elements.
 
 # Resistance (R)
-The resistance is the ability for an element to resist the flow of charge and is denoted by the variable $R$. Its unit of measure is ohms ($\Omega$). An ohm is equivilent to one $\text{volt / amp} \text{}$.
+The resistance is the ability for an element to resist the flow of charge and is denoted by the variable $R$. Its unit of measure is ohms ($\Omega$). An ohm is equivalent to one $\text{volt / amp} \text{}$.
 
 It depends on the material's length ($l$), cross sectional area ($A$) and resistivity ($\rho$).
 
@@ -101,12 +101,12 @@ Note:
 A resistor is a linear two terminal passive circuit element that contains a resistance.
 
 #### Series Resistance Addition
-If two resistors are in series, then that means it shares a common node. The equivilent resistance is merely the sum of each resistance. For $n$ resistors in series:
+If two resistors are in series, then that means it shares a common node. The equivalent resistance is merely the sum of each resistance. For $n$ resistors in series:
 
 $$R_{eq}=\sum_{n=1}^N R_n$$
 
 #### Parallel Resistance Addition
-If two resistors are in paralle, that means it shares two common nodes. The equivilent resistance is the product of each resistance divided by their sum. For $n$ resistors in parallel:
+If two resistors are in parallel, that means it shares two common nodes. The equivilent resistance is the product of each resistance divided by their sum. For $n$ resistors in parallel:
 
 $$\frac{1}{R_{eq}}=\frac{1}{R_{1}} + \frac{1}{R_{2}} + \ldots + \frac{1}{R_{n}}$$
 
@@ -269,7 +269,7 @@ $$w=\frac{1}{2} Cv^2 = \frac{q^2}{2C}$$
 
 #### DC Conditions
 
-In DC conditions, if its voltage is not chaning with respect to time, a capacitor acts like an open circuit.
+In DC conditions, if its voltage is not changing with respect to time, a capacitor acts like an open circuit.
 
 # Inductor
 

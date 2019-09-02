@@ -1,6 +1,6 @@
 ---
 header: Microelectronics
-description: The study of small eletrical components.
+description: The study of small electrical components.
 ---
 
 # Brief
@@ -11,13 +11,13 @@ The main goal of an operational amplifier is to amplify a voltage. It has three 
 
 ![opamp](/microelectronics/opamp.svg)
 
-An op amp is operated by DC power supplies with one rail connected to postive voltage and the other connected to negative voltage.
+An op amp is operated by DC power supplies with one rail connected to positive voltage and the other connected to negative voltage.
 
 ## Ideal Operation Amplifier Model
 
 We can assume four characteristics of an ideal op amp:
 
-1. $i_{input} = 0 \implies R_i \rightarrow \infty$. No current flows into the input terminals, thus the input impedence is infinite.
+1. $i_{input} = 0 \implies R_i \rightarrow \infty$. No current flows into the input terminals, thus the input impedance is infinite.
 2. $v_o = A(v_2-v_1) \implies R_o \rightarrow 0$. The output terminal acts like an ideal voltage source, where $v_o = A(v_2-v_1)$, so the output impedance is zero.
 3. Bandwidth $\rightarrow \infty$. In other words, the op amp can amplify signals at any frequency with equal gain.
 4. Infinite Open Loop Gain. $A \rightarrow \infty$.
@@ -44,7 +44,7 @@ $$v_{Icm}=\frac{1}{2} (v_1+v_2)$$
 $$G \equiv \frac{v_O}{v_I}$$
 
 # MOSFETs
-A MOSFET is a metal oxide semiconduter (MOS) field effect transistor (FET). It is a two terminal semiconductor device that is often utilized in integrated circuits. 
+A MOSFET is a metal oxide semiconductor (MOS) field effect transistor (FET). It is a two terminal semiconductor device that is often utilized in integrated circuits. 
 
 ## N-channel MOS
 The N-channel MOS is one that has a heavily doped n-channel regions in the source and drain regions. It has the drain, source, gate and body.
@@ -107,7 +107,7 @@ $$C=C_{ox}WL$$
 
 #### Electron Mobility $\mu_n$
 
-#### Process Transc onductance
+#### Process Transconductance
 
 $$k^{'}_{n} = \mu_n C_{ox}$$
 

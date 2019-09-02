@@ -17,7 +17,7 @@ $$\displaystyle L = \lim_{x \rightarrow a} f(x)$$
 
 ### Verbal
 
-L is the limit of f of x as x approches a.
+L is the limit of f of x as x approaches a.
 
 ## Computation
 

@@ -31,8 +31,8 @@ $$S = \left\{ x, y, z \right\}$$
 | ------ | ------------ | --------- |
 | $\in$  | in           | $x \in S$ - "$x$ is an element of $S$" |
 | $\dots$| and so forth | $\left\{ 1, 2, 3, ... \right\}$ - "Set of all positive integers" |
-| $\mathbb{R} \text{}$ | Set of all real numbers | - |
-| $\mathbb{Z} \text{}$ | Set of all integers | - |
+| $\mathbb{R} \text{}$ | Set of all real numbers | $\left\{ ..., -1, -\frac{1}{2}, 0, \frac{1}{2}, 1, ... \right\}$ |
+| $\mathbb{Z} \text{}$ | Set of all integers | $\left\{ ..., -2, -1, 0, 1, 2, ... \right\} \text{}$ |
 | $\mathbb{Q} \text{}$ | Set of all rational numbers, quotients of integers | - |
 
 ### Axiom of Extension
@@ -141,15 +141,15 @@ If $A$ and $B$ are sets and $F$ is a function from $A$ to $B$, then given any el
 
 Let $A$ and $B$ be sets and $f$ be a function. If $x \in A$ and $y \in B$, a function $f: A \rightarrow B$ is defined by $f: x \mapsto y$ means $f(x) = y$, the domain is defined on the set $A$ and the co-domain is defined on the set $B$.
 
-# Logic of Compound Statements
+# Logic and Statements
 
-### Symbols
+### Logical Connective Symbols
 
-| Symbol | Meaning           |
-| ------ | ----------------- |
-| ~      | negation (not)    |
-| ∧      | conjunction (and) |
-| ∨      | disjunction (or)  |
+| Symbol   | Meaning           |
+| -------- | ----------------- |
+| $\lnot$  | negation (not)    |
+| $\wedge$ | conjunction (and) |
+| $\vee$   | disjunction (or)  |
 
 ### Structure
 
@@ -162,11 +162,100 @@ It usually takes the form of:
 
 If $p$ or $q$, then $r$. $q$. Therefore, $r$.
 
+There is also:
+
+| Structure           | Translation      |
+| ------------------- | ---------------- |
+| $p$ but $q$         | $p \wedge q$     |
+| neither $p$ nor $q$ | $\lnot p$ $\vee$ $\lnot q$ |
+
 ### Statements
 
 A statement is a sentence that is true or false but not both.
 
-### Compound Statements
+#### Statement Examples
+
+- True: $1+1 = 2$
+- False: $1+1 = 3$
+
+#### Non-statement Examples
+
+- $x + y > 0$ since it is true for some values but not for values $x + y \leq 0$
+
+### Statement (Propositional) Form
+
+A statement form is one that contains statement variables and [logical connectives](#logical-connective-symbols) only.
+
+For example, the statement form of "$\text{My clothes are }$$\underbrace{\text{clean}}_p$ $\text{and not }$$\underbrace{\text{wrinkled}}_q$" would be $p$ $\wedge$ $\lnot q$.
+
+### Truth Table
+
+A truth table contains all of the possible combinations of a statement.
+
+### Negation Truth Table
+
+| $p$ | $\lnot p$ |
+| - | - |
+| T | F |
+| F | T |
+
+### Conjunction Truth Table
+
+| $p$ | $q$ | $p \wedge q$ |
+| - | - | - |
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | F |
+
+### Disjunction Truth Table
 
 
+| $p$ | $q$ | $p \vee q$ |
+| - | - | - |
+| T | T | T |
+| T | F | T |
+| F | T | T |
+| F | F | F |
 
+### Logical Equivalence
+
+Being logically equivalent means that two statement forms have identical truth values for each combination possibility.
+
+If $P$ and $Q$ are two [statement forms](#statement-propositional-form) and they are logically equivalent, then $P \equiv Q$.
+
+### Tautology
+
+A statement form that is always true in every interpretation.
+
+### Contradiction
+
+A statement form that is always false in every interpretation.
+
+#### Tautology and Contradiction Example
+
+A tautology is denoted as $t$, while a contradiction is denoted as $c$.
+
+| $p$ | $\lnot p$ | $p \lor \lnot p$ | $p \land \lnot p$ |
+| --- | - | - | - |
+| T | F | T | F |
+| F | T | T | F |
+
+$p \lor \lnot p$ is the definition of a tautology. All interpretations are true.
+
+$p \land \lnot p$ is the definition of a contradiction. All interpretations are false.
+
+### Conditional Statements
+
+A conditional statement has the form: If $p$ then $q$. More formally, the notation is $p \rightarrow q$, which means $p$ implies $q$.
+
+The truthfulness of $q$ is dependent on the statement of $p$.
+
+#### Conditional Statement Truth Table
+
+| $p$ | $q$ | $p \rightarrow q$ |
+| - | - | - |
+| T | T | T |
+| T | F | F |
+| F | T | T |
+| F | F | T |

@@ -100,7 +100,7 @@ A namespace contains a project and its workloads while also partitioning it from
 
 #### ConfigMaps and secrets
 
-#### Persisent Volumes
+#### Persistent Volumes
 
 Network storage.
 
