@@ -155,8 +155,8 @@ Let $A$ and $B$ be sets and $f$ be a function. If $x \in A$ and $y \in B$, a fun
 
 A compound statement is composed of:
 
-- **Premises**: Statements.
-- **Conclusions**: An assertion based on premises.
+- [Premises](#premise): Statements.
+- [Conclusion](#conclusion): An assertion based on premises.
 
 It usually takes the form of: 
 
@@ -270,7 +270,7 @@ The then statement ($q$).
 
 ### Vacuously True
 
-An if statement is vacuously true (true by default) if the hypothesis is false.
+An if statement is **vacuously true** (true by default) if the hypothesis is false.
 
 ### Negation of Conditional Statement
 
@@ -279,3 +279,193 @@ $$\lnot (p \rightarrow q) \equiv p \land \lnot q$$
 ### Contrapositive of Conditional Statement
 
 $$p \rightarrow q \equiv \lnot q \rightarrow \lnot p$$
+
+### Converse of Conditional Statement
+
+Let "$p \rightarrow q$" be a conditional statement.
+
+The **converse** of the statement is:
+
+$$q \rightarrow p$$
+
+### Inverse of Conditional Statement
+
+Let "$p \rightarrow q$" be a conditional statement.
+
+The **inverse** of the statement is:
+
+$$\lnot p \rightarrow \lnot q$$
+
+### Only If
+
+$p$ only if $q$ means $p$ is true if $q$ is true, or in other words:
+
+$$\lnot q \rightarrow \lnot p \equiv p \rightarrow q$$
+
+### Biconditional
+
+Let $p$ and $q$ be statement variables.
+
+The **biconditional** of $p$ and $q$ is "$p$ if and only if (iff) $q$":
+
+$$p \leftrightarrow q$$
+
+
+### Sufficient Condition
+
+Let $r$ be a **sufficient condition** for $s$. This means:
+
+$$r \rightarrow s$$
+
+or $r$ is sufficient to guarantee $s$ is true.
+
+### Necessary Condition
+
+Let $r$ be a **necessary condition** for $s$. This means:
+
+$$\lnot r \rightarrow \lnot s$$
+
+or if $r$ is false, $s$ is false.
+
+### Sufficient and Necessary Condition
+
+Let $r$ be a **sufficient and necessary** condition. This means:
+
+$$r \leftrightarrow s$$
+
+# Arguments
+
+An argument is a sequence of statements.
+
+### Argument Form
+
+An argument form is the sequence of [statement forms](#statement-propositional-form).
+
+### Premise
+
+**Premises** are statements in an argument and all statement forms in an argument form except the final one.
+
+### Conclusion
+
+A **conclusion** is the final statement or statement form.
+
+# Valid Argument Form
+
+A **valid argument form** means if the premises are all true, the conclusion is true.
+
+#### Critical Row
+
+The **critical row** is the row of a truth table where all of the premises are true.
+
+An argument form is said to be invalid if the [conclusion](#conclusion) is false in the critical row.
+
+### Modus Ponens
+
+**Modus Ponens** is a [valid argument form](#valid-argument-form) that says the conclusion is affirmed. It has the form:
+
+$$
+p \rightarrow q. \\
+p. \\
+\therefore q
+$$
+
+
+
+### Modus Tollens
+
+**Modus Tollens** is a [valid argument form](#valid-argument-form) that says the conclusion is a denial. It is [logically equivalent](#logical-equivalence) to [Modus Ponens](#modus-ponens) through the [contrapositive](#contrapositive-of-conditional-statement) identity. It has the form:
+
+$$
+p \rightarrow q. \\
+\lnot q. \\
+\therefore \lnot p.
+$$
+
+### Rule of Inference
+
+A **rule of inference** is a [valid argument form](#valid-argument-form).
+
+#### Generalization
+
+$$
+p. \\
+\therefore p \lor q.
+$$
+
+$$
+q. \\
+\therefore p \lor q.
+$$
+
+#### Elimination
+
+$$
+p \lor q. \\
+\lnot q. \\
+\therefore p.
+$$
+
+$$
+p \lor q. \\
+\lnot p. \\
+\therefore q.
+$$
+
+
+#### Transitivity
+
+$$
+p \rightarrow q. \\
+q \rightarrow r. \\
+\therefore p \rightarrow r.
+$$
+
+### Division into Cases
+
+$$
+p \lor q. \\
+p \rightarrow r. \\
+q \rightarrow r. \\
+\therefore r.
+$$
+
+### Sound Argument
+
+An argument is **sound** iff it is valid and all its premises are true.
+
+### Unsound Argument
+
+An argument that is not sound.
+
+# Fallacy (Invalid Argument)
+
+A fallacy is an invalid argument due to an error in reasoning. In other words, the [critical row](#critical-row) contains [premises](#premise) that are true but the [conclusion](#conclusion) is false.
+
+### Converse Error
+
+The following argument is **invalid**:
+
+$$
+p \rightarrow q. \\
+q. \\
+\therefore p.
+$$
+
+### Inverse Error
+
+The following argument is **invalid**:
+
+$$
+p \rightarrow q. \\
+\lnot p. \\
+\therefore \lnot q.
+$$
+
+# Contradictions
+
+If the statement $p$ is false and leads logically to a contradiction, you can conclude $p$ is true.
+
+$$
+\lnot p \rightarrow c \\
+\therefore p
+$$
