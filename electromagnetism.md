@@ -5,7 +5,7 @@ description: Electromagnetic forces.
 
 # Coulomb's Law
 
-Coulomb's law quantifies the relationship between two electrically charged particles.
+Coulomb's law quantifies the relationship between two electrically charged particles. It is useful for finding the electric field due to **point charges**.
 
 ### Magnitude of Force
 
