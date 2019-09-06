@@ -30,3 +30,27 @@ $$\bold{F} = k_e \frac{q_1 q_2}{|\bold{r}_{21}|^2} \hat{\bold{r}}_{21} = k_e \fr
 ### Electric Field Intensity
 
 $$\bold{E} = \frac{\bold{F}_2}{q} = \frac{Q}{4 \pi \epsilon_0 R^2} \bold{r}$$
+
+More generally,
+
+$$\bold{E} = \sum_{i=1}^N \frac{Q_i}{4 \pi \epsilon_0 R_i^2} \bold{a}_{R_i}$$
+
+# Electric Flux
+
+The electric flux eminating from a charged sphere is proportional to the total charge of the sphere.
+
+$$\psi_e = Q$$
+
+### Electric Flux Density over Sphere
+
+$$\bold{D} = \epsilon_0 \bold{E} = \frac{Q}{4 \pi r^2} \bold{a}_r$$
+
+| Variable           | Meaning                                     |
+| ------------------ | ------------------------------------------- |
+| $\epsilon_0$       | $8.854 \times 10^{-12} F \cdot m^2 \text{}$ |
+| $\bold{E} \text{}$ | Electric Field Intensity                    |
+| $\bold{a}_r$       | Direction of Electric Flux Density          |
+
+### Electric Flux over Closed Surface $s$
+
+$$\Phi_E = \oint_s \epsilon_0 \bold{E} \cdot d\bold{s} = \frac{Q}{\epsilon_0}$$
