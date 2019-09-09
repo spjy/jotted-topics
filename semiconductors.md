@@ -29,7 +29,7 @@ Three elements. For example $\text{Al} \text{G}_{a_{1-x}} \text{As}$.
 
 # Types of Solids
 
-### Amporphous
+### Amorphous
 
 - No order
 - No patterns
@@ -53,7 +53,7 @@ A lattice is the periodic arrangement of atoms.
 ### Unit Cell
 
 - The smallest volume of crystal used to reproduce crystal.
-- Repetetive arrangement can build up the crystal without overlap.
+- Repetitive arrangement can build up the crystal without overlap.
 - Orthogonal
 - For example, zinc blende, diamond lattice
 
@@ -61,7 +61,7 @@ A lattice is the periodic arrangement of atoms.
 
 - Contains one **lattice point**.
 - Smallest unit cell that can be repeated to form a lattice. Most basic cell of a lattice.
-- Can be nonorthogonal or orthogonal.
+- Can be non-orthogonal or orthogonal.
 
 # Crystal Structures
 

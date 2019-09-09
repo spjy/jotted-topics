@@ -75,21 +75,21 @@ $$A \subsetneq B$$
 
 In other words, there is at least one element in $B$ that is not in $A$.
 
-### Superset ($\supseteq$)
+### Super Set ($\supseteq$)
 
 Let $A$ and $B$ be sets.
 
-If every element in $A$ is also an element of $B$, $B$ is a superset of $A$. It is denoted as:
+If every element in $A$ is also an element of $B$, $B$ is a super set of $A$. It is denoted as:
 
 $$B \supset A$$
 
 $B$ must equal $A$.
 
-### Proper Subset ($\supsetneq$)
+### Proper Super Set ($\supsetneq$)
 
 Let $A$ and $B$ be sets.
 
-If $B \supset A$ but $B \neq A$, $B$ is a proper superset of $A$. It is denoted as:
+If $B \supset A$ but $B \neq A$, $B$ is a proper super set of $A$. It is denoted as:
 
 $$B \supsetneq A$$
 

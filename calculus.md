@@ -1,6 +1,6 @@
 ---
 header: Calculus
-description: The study of limits.
+description: Infinitesimal distances.
 ---
 
 # Brief

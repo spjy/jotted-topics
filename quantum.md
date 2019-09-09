@@ -38,7 +38,7 @@ $$p = \frac{h}{\lambda}$$
 
 # Heisenberg Uncertainty Principle
 
-The Heisenberg uncertainty principle is especially useful for very small particles. It tsays that simultaneous measurements of two values has some error attached to it because of the scale.
+The Heisenberg uncertainty principle is especially useful for very small particles. It says that simultaneous measurements of two values has some error attached to it because of the scale.
 
 $$\hbar = \frac{h}{2 \pi}$$
 
