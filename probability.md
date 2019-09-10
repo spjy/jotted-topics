@@ -57,4 +57,6 @@ $$P(\left\{s_1, s_2, ..., s_3\right\}) = P(s_1) + P(s_2) + ... + P(s_n) $$
 
 ### Discrete Uniform Probability Law
 
+Given an event $A$:
+
 $$P(A) = \frac{\text{number of elements of A}}{n}$$
