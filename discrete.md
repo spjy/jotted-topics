@@ -469,3 +469,35 @@ $$
 \lnot p \rightarrow c \\
 \therefore p
 $$
+
+# Number Theory
+
+## Even Integer
+
+Let $n$ be an integer.
+
+$n$ is even $\iff \exists$ an integer $k$ such that $n = 2k$.
+
+## Odd Integer
+
+Let $n$ be an integer.
+
+$n$ is odd $\iff \exists$ an integer $k$ such that $n = 2k + 1$.
+
+## Prime
+
+Let $n$ be an integer for $n > 1$.
+
+$n$ is prime $\iff \forall$ positive integers $r$ and $s$, if $n = rs$ then either $r = 1$ and $s = n$ or $r = n$ and $s = 1$.
+
+## Floor
+
+For $x \in \mathbb{R}$, $\lfloor x \rfloor$ is the floor of $x$.
+
+$\lfloor x \rfloor = n \iff n \leq x \lt n + 1$
+
+## Ceiling
+
+For $x \in \mathbb{R}$, $\lceil x \rceil$ is the floor of $x$.
+
+$\lceil x \rceil = n \iff n - 1 \lt x \leq n$
