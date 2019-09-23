@@ -272,13 +272,39 @@ The then statement ($q$).
 
 An if statement is **vacuously true** (true by default) if the hypothesis is false.
 
+### Conditional Statement as Or
+
+A conditional statement is equivalent to the negation of the hypothesis ORed with the consequence.
+
+$$p \rightarrow q \equiv \lnot p \lor q$$
+
+#### Conditional Statement as Or Example
+
+- **Or**: $\text{Either } \underbrace{\text{you do the dishes}}_p \text{ or } \underbrace{\text{you will not get desert}}_q$.
+- **Conditional**: $\text{If } \underbrace{\text{you do not do the dishes}}_{\lnot p}, \underbrace{\text{you will not get desert}}_q$.
+
+
 ### Negation of Conditional Statement
+
+If we negate a conditional statement, the resulting statement will be the hypothesis ANDed with the negation of the consequent.
 
 $$\lnot (p \rightarrow q) \equiv p \land \lnot q$$
 
+#### Negation of Conditional Statement Example
+
+- **Conditional**: If I eat dinner, I will not be hungry.
+- **Negated Conditional $\rightarrow$ And Statement**: I ate dinner and I am hungry.
+
 ### Contrapositive of Conditional Statement
 
+A conditional statement is equivalent to the conditional statement of the negated hypothesis and negated consequence.
+
 $$p \rightarrow q \equiv \lnot q \rightarrow \lnot p$$
+
+### Contrapositive of Conditional Statement Example
+
+- **Conditional**: If I drive to work, I will be on time.
+- **Contrapositive**: If I am not on time, then I did not drive to work.
 
 ### Converse of Conditional Statement
 
@@ -302,6 +328,8 @@ $p$ only if $q$ means $p$ is true if $q$ is true, or in other words:
 
 $$\lnot q \rightarrow \lnot p \equiv p \rightarrow q$$
 
+$p$ can happen **only if** $q$ happens. Therefore, if $q$ does not occur, $p$ cannot occur.
+
 ### Biconditional
 
 Let $p$ and $q$ be statement variables.
@@ -310,6 +338,16 @@ The **biconditional** of $p$ and $q$ is "$p$ if and only if (iff) $q$":
 
 $$p \leftrightarrow q$$
 
+$p$ can only happen if $q$ happens. Similarly, $q$ must be true if $p$ is true.
+
+#### Truth Table for Biconditional
+
+| $p$ | $q$ | $p \leftrightarrow q$ |
+| - | - | - |
+| T | T | T |
+| T | F | F |
+| F | T | F |
+| F | F | T |
 
 ### Sufficient Condition
 
@@ -369,8 +407,6 @@ p. \\
 \therefore q
 $$
 
-
-
 ### Modus Tollens
 
 **Modus Tollens** is a [valid argument form](#valid-argument-form) that says the conclusion is a denial. It is [logically equivalent](#logical-equivalence) to [Modus Ponens](#modus-ponens) through the [contrapositive](#contrapositive-of-conditional-statement) identity. It has the form:
@@ -410,7 +446,6 @@ p \lor q. \\
 \lnot p. \\
 \therefore q.
 $$
-
 
 #### Transitivity
 
@@ -472,32 +507,85 @@ $$
 
 # Number Theory
 
-## Even Integer
+### Even Integer
 
 Let $n$ be an integer.
 
 $n$ is even $\iff \exists$ an integer $k$ such that $n = 2k$.
 
-## Odd Integer
+#### Theorem.
+
+The sum of any two even integers is even.
+
+### Odd Integer
 
 Let $n$ be an integer.
 
 $n$ is odd $\iff \exists$ an integer $k$ such that $n = 2k + 1$.
 
-## Prime
+### Prime
 
 Let $n$ be an integer for $n > 1$.
 
 $n$ is prime $\iff \forall$ positive integers $r$ and $s$, if $n = rs$ then either $r = 1$ and $s = n$ or $r = n$ and $s = 1$.
 
-## Floor
+### Rational
+
+$r$ is rational $\iff \exists$ integers $a$ and $b$ such that $\displaystyle r = \frac{a}{b}$ and $b \neq 0$.
+
+#### Theorem: Every integer is rational.
+
+#### Theorem: The sum of any two rational numbers is rational.
+
+#### Corollary: The double of a rational number is rational.
+
+#### Zero Product Property
+
+If neither of two real numbers is zero, then their product is also not zero.
+
+### Irrational
+
+A real number that is not [rational](#rational) is irrational.
+
+### Standard Factored Form
+
+For an integer $n > 1$, the standard factored from of $n$ is an expression of the form:
+
+$$n = p_1^{e_1} p_2^{e_2} p_3^{e_3} ... p_k^{e_k}$$
+
+where
+
+- $k$ is a positive integer
+- $p_1, p_2, ..., p_k$ are prime
+- $e_1, e_2, ..., e_k$ are positive integers
+- $p_1 < p_2 < ... < p_k$
+
+### Floor
 
 For $x \in \mathbb{R}$, $\lfloor x \rfloor$ is the floor of $x$.
 
 $\lfloor x \rfloor = n \iff n \leq x \lt n + 1$
 
-## Ceiling
+### Ceiling
 
 For $x \in \mathbb{R}$, $\lceil x \rceil$ is the floor of $x$.
 
 $\lceil x \rceil = n \iff n - 1 \lt x \leq n$
+
+### Divisibility
+
+If $n, d \in \mathbb{Z}$ and $d \neq 0$ then:
+
+$n$ is divisible by $d$ iff $n = d \cdot k$ for $k \in \mathbb{Z}$.
+
+$n$ being divisible by $d$ also means:
+- $n$ is a multiple of $d$
+- $d$ is a factor of $n$
+- $d$ is a divisor of $n$
+- $d$ divides $n$
+
+### Divides
+
+If $n, d \in \mathbb{Z}$, $d$ divides $n$ is denoted as $d \mid n$.
+
+$d \mid n \iff \exists$ an integer $k$ such that $n = dk$.
