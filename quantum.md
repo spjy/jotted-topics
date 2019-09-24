@@ -46,6 +46,44 @@ $$\Delta p \Delta x \geq \hbar$$
 
 $$\Delta E \Delta t \geq \hbar$$
 
+# The Wave Function
+
+The wave function, $\Psi(x,t)$ describes the behavior of an electron in crystal.
+
+It has the general form:
+
+$$\Psi(x,t) = A e^{j(kx-\omega t)} + B e^{-j(kx-\omega t)}$$
+
+### Probability Density Function
+
+Alone, the wave function $\Psi(x, t)$ does not represent anything physcially. The probability density function,
+
+$$|\Psi(x,t)|^2 = \Psi(x, t) \cdot \Psi^*(x,t)$$
+
+represents the probability of finding the particle between $x$ and $x+dx$ at a certain time.
+
+### Boundary Conditions
+
+Given the [probability density function](#probability-density-function), $|\Psi(x)|^2$, we can say that, for a single particle:
+
+$$\int_{- \infty}^\infty |\Psi(x)|^2 dx = 1$$
+
+which states that over all of space, the probability of finding the particle is 100%.
+
 # Schrodinger's Wave Equation
 
+Schrodinger's wave equation describes the motion of electrons in a crystal and meshes the ideas of quantization and the wave-particle duality.
+
 $$- \frac{\hbar^2}{2m} \cdot \frac{\partial^2 \psi(x,t)}{\partial x^2} + V(x) \psi(x, t) = j \hbar \frac{\partial \psi (x,t)}{\partial t} $$
+
+### Electron in a Free Space
+
+If an electron is in free space, it has no external forces acting on itself.
+
+Therefore, we assume:
+
+- $V(x) = 0$, the potential energy is zero.
+
+### Infinite Potential Well
+
+

@@ -25,6 +25,26 @@ $$\bold{F} = k_e \frac{q_1 q_2}{|\bold{r}_{21}|^2} \hat{\bold{r}}_{21} = k_e \fr
 - $k_e = 8.988 \times 10^9 N \cdot m^2 \cdot C^{-2} \text{}$
 - $r_{21}$ is the vector from $q_2$ to $q_1$.
 
+# Biot-Savart Law
+
+The Biot-Savart Law quantifies the generation of a magnetic field from a constant current carrying conductor.
+
+$$d\bold{F}_m = md \bold{B} = m\mu_0 \frac{I dl \times a_R}{4\pi r^2}$$
+
+| Variable | Meaning |
+| -------  | ------- |
+| 
+
+# Lorentz Force
+
+# Lenz's Law
+
+Induced emf is in such a way that opposes the change in magnetic flux.
+
+$$\bold{F} = q \bold{v} \times \bold{B}$$
+
+$$\bold{B}(\bold{r}) = \frac{\mu_0}{4 \pi} \int_c \frac{I d\bold{l} \times \bold{a}_R}{|a_R|^2} $$
+
 # Electric Field
 
 ### Electric Field Intensity
@@ -63,7 +83,7 @@ The electric flux eminating over a closed surface $s$ is equal to the charge.
 
 #### Integral Form
 
-$$\Phi_e = \oint_s \epsilon_0 \bold{E} \cdot d \bold{s} = \int_v \rho_v dv$$
+$$\Phi_e = \oint_s \epsilon_0 \bold{E} \cdot d \bold{s} = \int_v \rho_v dv = Q$$
 
 #### Differential Form
 
