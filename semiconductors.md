@@ -93,9 +93,9 @@ $$\bar{r} = p \bar{r} + q \bar{b} + s \bar{c}$$
 Representation of crystal planes.
 
 1. Find the intercepts of $\bar{r} = p \bar{r} + q \bar{b} + s \bar{c}$ on the $\bar{a}$, $\bar{b}$ and $\bar{c}$ axes
-2. Put it in the form $(\frac{1}{p}, \frac{1}{q}, \frac{1}{s})$
-3. Find $\text{LCD}(\frac{1}{p}, \frac{1}{q}, \frac{1}{s})$
-4. Multiply $(\frac{1}{p}, \frac{1}{q}, \frac{1}{s}) \cdot \text{LCD}(\frac{1}{p}, \frac{1}{q}, \frac{1}{s})$
+2. Put it in the form $\displaystyle (\frac{1}{p}, \frac{1}{q}, \frac{1}{s})$
+3. Find $\displaystyle \text{LCD}(\frac{1}{p}, \frac{1}{q}, \frac{1}{s})$
+4. Multiply $\displaystyle (\frac{1}{p}, \frac{1}{q}, \frac{1}{s}) \cdot \text{LCD}(\frac{1}{p}, \frac{1}{q}, \frac{1}{s})$
 
 ### Vector Characterization of Direction
 
@@ -105,5 +105,6 @@ where $\text{xyz}$ is the vector perpendicular to the surface of the crystal pla
 
 # Diamond Structure
 
-# Quantum Mechanics
+# Quantum Theory of Solids
+
 
