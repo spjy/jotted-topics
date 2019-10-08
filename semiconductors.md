@@ -107,4 +107,72 @@ where $\text{xyz}$ is the vector perpendicular to the surface of the crystal pla
 
 # Quantum Theory of Solids
 
+### Pauli Exclusion Principle
 
+No two electrons in an atom or molecule can have the same set of quantum numbers.
+
+### Energy Band Model
+
+An energy band is a collection of discrete energy levels.
+
+As two atoms approach each other (interatomic distance $r_0$ decreases), the interaction increases due to the overlapping of wavefunctions.
+
+#### Discrete Energy Levels
+
+The interaction results in a discrete quantized energy level splitting into two discrete energy levels to form an **energy band**. This is to allow the electrons to occupy a distinct quantum state, following the [Pauli Exclusion Principle](#pauli-exclusion-principle).
+
+#### Atomic Interaction
+
+Naturally, as atoms approach each other, the outermost shell of each atom tends to interact first, say at the $n=2$ energy level. As the atoms further approach each other, they eventually interact in lower energy levels until it reaches $n=1$.
+
+#### Forbidden Bands
+
+In between the discrete energy bands, say between $n=1$ and $n=2$, are called the forbidden energy bands; no electrons are allowed in the area, only in the discrete energy bands.
+
+#### Absense of Thermal Energy
+
+When there is no thermal energy ($T=0$), electrons are in the lowest energy state. All states in the **valence band** are filled while all the states in the **conduction band** are empty.
+
+### Energy Bond Model
+
+#### Atomic Bonding
+
+Electrons are what keep two atoms bounded together. When there is an [absense of thermal energy](#absense-of-thermal-energy) ($T=0$), no bonds are broken. However, as thermal energy increases, the electrons may gain thermal energy to break the covalent bond and jump to the conduction band from the valence band. As a result, a hole (proton) is left in the valence band, and an electron is left in the conduction band.
+
+### Drift Current
+
+Current is the net flow of charge. If there is a net drift of electrons in the conduction band, current will exist since electrons are charged.
+
+#### Drift Current Density
+
+$$J = qNv_d \qquad \text{A/cm}^2$$
+
+where $q$ is the charge, $N$ is the volume density and $v_d$ is the drift current.
+
+#### Average Drift Current
+
+$$J = q \sum_{i=1}^N v_i$$
+
+where $v_i$ is the velocity of the $i$th ion.
+
+#### Electron Effective Mass
+
+An electron in a lattices experiences the forces:
+
+$$F_{\text{total}} = F_{\text{external}} + _{\text{internal}} = ma$$
+
+Simplifying the model, we have:
+
+$$F_{\text{external}} = m^{*}a$$.
+
+$m^*$ is the effective mass.
+
+Taking the energy of an electron in free space, we take the second derivative of energy with respect to $k$ to isolate $m$:
+
+$$E=\frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m} \implies \frac{1}{\hbar^2} \frac{d^2E}{dk^2} = \frac{1}{m^*}$$
+
+#### Free Electron Mechanics
+
+Applying an electric field to a free electron causes an electron to accelerate in the opposite direction of the field due to its charge.
+
+$$F = ma = -eE \implies a=\frac{-eE}{m}$$
