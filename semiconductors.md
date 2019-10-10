@@ -176,3 +176,27 @@ $$E=\frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m} \implies \frac{1}{\hbar^2} \frac{d^2
 Applying an electric field to a free electron causes an electron to accelerate in the opposite direction of the field due to its charge.
 
 $$F = ma = -eE \implies a=\frac{-eE}{m}$$
+
+### Density of States
+
+It is important to find the density of allowed energy states (based on the energy band theory) to calculate electron and hole concentrations.
+
+#### Density of Allowed Electron Energy States in Conduction Band
+
+$$g_c(E) = \frac{4 \pi (2m^*_n)^{3/2}}{h^3} \sqrt{E - E_c} \qquad E \geq E_c$$
+
+As the nergy of the elctron in the conduction band decreases, the number of quantum states decreases.
+
+#### Density of Allowed Electron Energy States in Valence Band
+
+$$g_c(E) = \frac{4 \pi (2m^*_v)^{3/2}}{h^3} \sqrt{E_v - E} \qquad E \leq E_v$$
+
+### Statistical Mechanics
+
+#### Fermi-Dirac Probability Function
+
+The Fermi-Dirac probability function considers particles to be indistinguishable. It includes all of the permutations of $N$ particles; also, it ocnsiders the $i$th energy level with $g_i$ quantum states.
+
+#### Maxwell-Boltzmann Probability Function
+
+This function considers particles to be numbered from $1 \rightarrow N$ with no limit to the number of particles allowed in each energy state.

@@ -169,13 +169,16 @@ A conversion from an instruction to a decimal representation of the instruction:
 
 `B Skip` $\implies$ `5 25`
 
-where `Skip` is the number of bytes to skip. In this case, it will skip $25 bytes \cdot 4 = 100 bits$.
+where `Skip` is the number of bytes to skip. In this case, it will skip $25$ bytes $\cdot \text{ } 4 = 100$ bits.
+
+#### B-Type Instructions
 
 B-Type Instruction|Meaning|Note
 :-----:|:-----:|:-----:
 `B Label`|Branch|Jumps to `Label`.
 `BR LR`|Branch to register|Jumps to register `LR`'s address
 `BL Label`|Branch with link|Jumps to `Label` and stores the address of the next instruction.
+`B.cond Label`|Branch conditionally|Jump to label based on condition code values
 
 ### CB-Type Instruction (Condiitonal Branch)
 
@@ -203,7 +206,9 @@ IW-Type instructions handle large constants.
 :-----:|:-----:|:-----:|:-----:
 9 bits|2 bits|16 bits|5 bits
 
-In a normal machine instruction, this would look like: `opcode Rd, constant, block_number`.
+In a normal machine instruction, this would look like: `opcode Rd, constant, LSL block_number`. 
+
+`block_number` is limited to 0, 16, 32, 48.
 
 #### IW-Type Instruction Example
 
@@ -211,3 +216,77 @@ A conversion from an instruction to a decimal representation of the instruction:
 
 `MOVZ X1, 256, LSL 0` $\implies$ `421 1 256, 0`
 
+**B-Type Instruction**|**Meaning**|**Note**
+:-----:|:-----:|:-----:
+`MOVZ register, constant, LSL shift_amount`|Move wide with zeroes|Set the specified quadrant of the register to the constant specified and set the other quadrants to zero.
+`MOVK register, constant, LSL shift_amount`|Move wide with keep|Set the specified quadrant of the register to the constant specified and keep the other quadrants the same.
+
+## Supporting Computer Hardware Procedures
+
+### Program Counter
+
+The program counter holds the address of the current instruction being executed. 
+
+### Stack
+
+A LIFO queue. A stack is a memory block allocated to a program.
+
+### Stack Pointer (SP)
+
+The stack pointer points to the top of the stack (where the current operation is being done).
+
+## Translating and Starting a Program
+
+Pipeline of a program:
+
+$\fbox{\text{Program}} \rightarrow \text{Compiler} \rightarrow \fbox{\text{Assembly language program}} \rightarrow \text{Assembler} \rightarrow \fbox{Object File} \rightarrow \text{Linker} \rightarrow \fbox{Executable} \rightarrow \text{Loader} \rightarrow \fbox{\text{Memory}}$
+
+### Compiler
+
+A **compiler** converts a textual representation of code (through keywords and symbols) into assembly language.
+
+It uses pre-defined templates. 
+
+### Assember
+
+An **assembler** converts assembly language code into an object file (binary) or a machine program.
+
+It allocates space in memory for the instructions and data.
+
+Also, it builds a symbol table - that is, a table containing pairs of symbols its corresponding address.
+
+#### Object File
+
+An **object file** contains the machine language instructions, data and info needed to place instructions into memory.
+
+**Object File Part**|**Description**
+:-----:|:-----:
+Object File Header|The size and position of the parts of the object file.
+Text Segment|The machine language code.
+Static Data Segment|The data allocated for the life of the program
+Relocation Information|Instructions and data word addresses in memory
+Symbol Table|Remaining labels not defined like external references.
+
+### Linker
+
+Turns assembled [object files](#object-file) into an [executable](#executable). It also allows for re-linking through a link editor. To reduce the number of re-linking steps, the link editor looks for diffs in addresses and replaces them accordingly.
+
+1. Place code and data modules symbolically in memory.
+2. Determine addresses of data and instruction labels.
+3. Patch internal and external references
+
+#### Executable
+
+An **executable** is a simply an object file that contains no unresolved references.
+
+### Loader
+
+A loader takes the [executable](#executable) and reads it into memory.
+
+#### Statically Linked Libraries
+
+A library that is linked to a program during link time.
+
+#### Dynamically Linked Libraries
+
+A library routine that is linked to a program during execution time.
