@@ -133,3 +133,119 @@ $$I_{enc} = \oint_c \frac{\bold{B}}{\mu_0} \cdot d\bold{l} = \int_s \bold{J} \cd
 #### Differential Form
 
 $$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial (\epsilon_0 \bold{E})}{\partial t}$$
+
+# Wave Equation in Source Free Region
+
+### Source Free Region
+
+If a wave is in a source free region, it means the wave is away from the source.
+
+### Maxwell's Equations in Source Free Region
+
+We assume $\rho_v = 0$ and $\bold{J} = 0$ because we are in a [source free region](#source-free-region).
+
+$$\bold{\nabla} \cdot \epsilon_0 \bold{E} = 0$$
+
+$$\bold{\nabla} \cdot \bold{B} = 0$$
+
+$$\bold{\nabla} \times \bold{E} = - \frac{\partial \bold{B}}{\partial t}$$
+
+$$\bold{\nabla} \times \frac{\bold{B}}{\mu_0} = - \frac{\partial \bold{\epsilon}_0 \bold{b}}{\partial t}$$
+
+$$\bold{\nabla}^2 \bold{E} - \mu_0 \epsilon_0 \frac{\partial^2 \bold{E}}{\partial t^2} = 0$$
+
+$$\bold{\nabla}^2 \bold{B} - \mu_0 \epsilon_0 \frac{\partial^2 \bold{B}}{\partial t^2} = 0$$
+
+### Harmonic Fields in Phasor Representation
+
+Representing fields in the phasor form are useful for sinusoidal steady state analysis. However, because the phasor form is dependent solely on position (not time), it is incomplete for wave propagation analysis.
+
+# Maxwell's Equations and Plane Wave Propagation in Materials
+
+Materials consist of atoms, which contain charged particles. Because of this, additional induced sources (creating electric and magnetic fields) from the presence and interaction of these charged particles must be accounted for and added to the existing [Maxwell's equations](#maxwells-equations).
+
+The interaction of the charged particles results in conduction, polarization and magnetization. Each generates a mix of bound charge density, polarization or conduction currents.
+
+Boundary conditions describe the transition between different materials to account for the different properties of each.
+
+### Types of Materials
+
+#### Conductors
+
+Conductors are described to have a preponderance of **free** electrons in the conduction band. They are constantly in motion from thermal energy.
+
+Under the influence of external electric field $\bold{E}$, the electrons experience a force and the flow of electrons is the **induced conduction current**
+
+#### Dielectrics (Insulators)
+
+Dielectrics are described to have a preponderance of **bound** electrons in the valence band. Electrons are not free to move; they can only be displaced from their position. They have the ability to store electric energy.
+
+Under the influence of external electric field $\bold{E}$, an induced source known as the **polarization charges and currents** are generated.
+
+#### Magnetic Materials
+
+Magnetic materials have the ability to store magnetic energy.
+
+The process of aligning current loops causes an induced source called the **magnetization current**. 
+
+## Induced Sources
+
+### Conduction Current (Conductors)
+
+Conduction current is generated due to an application of an external electric field $\bold{E}$ on a conducting material. It is related to the drift of the free charges.
+
+Electrons not in free space do not accelerate due to the electric field; rather, they are assumed to be contained in the atomic structure of the material. Therefore, they are free to move inside the material but bounce off of the walls of the atomic lattice and induce friction.
+
+Electrons instead drift with a $\bold{v}_a$ average drift velocity and $\tau_c$ mean free time (average time interval between collisions):
+
+$$\bold{J} = \frac{m \bold{v}_a}{\tau_c} = -e\bold{E} \implies \bold{v}_a = - \frac{e \tau_c}{m} \bold{E}$$
+
+And we get the current density $\bold{J}$ (Ohm's law in point form) associated with the flow of the electronic changes:
+
+$$\bold{J} = (-ne) \bold{v}_a = \frac{ne^2 \tau_c}{m} \bold{E} = \sigma \bold{E}$$
+
+where $\sigma$ is the conductivity of the material.
+
+### Polarization (Dielectrics)
+
+There are three different types of polarization due to the application of external electric field $\bold{E}$ on a dielectric material. It is related to the displacement of bound charges. 
+
+Electrons within the dielectric material stores electric energy because of the shifts in the positions of the positive and negatives charges against normal molecular and atomic forces. The charge displacement is called polarization.
+
+#### Electronic Polarization
+
+Electric polarization results in the displacement of bound electrons of an atom such that the center of the cloud of electrons is separated from the center of the nucleus. The atom is polarized since an electric dipole is generated.
+
+The electric dipole moment, with point charges $+q$ and $-q$ with the distance between the two point charges $\bold{d}$ is:
+
+$$\bold{p} = q\bold{d}$$
+
+#### Orientational Polarization
+
+Polarization may already exist without an external electric field; however, atoms are randomly oriented meaning the net polarization is zero (in a macro sense).
+
+When an electric field is induced, a torque is induced on microscopic dipoles to orient them in the direction of the field.
+
+#### Ionic Polarization
+
+Materials that participate in ionic bonding electrically bind their positive and negative ions (since they transfer electrons between atoms).
+
+Upon applying an electric field the ions separate and form electric dipoles.
+
+#### Polarization
+
+The polarization, describing the electric polarization on a macroscopic level, is given by:
+
+$$\bold{P} = \lim_{\Delta v \rightarrow 0} \frac{1}{\Delta v} \sum_{i=1}^{n\Delta v} \bold{p}_i = n \bold{p}_a = nq\bold{d}_a = \rho_+ \bold{d}_a $$
+
+such that $n\Delta v$ is the number of dipoles in a volume $\Delta v$, $\bold{p}_a$ is the average dipole moment per molecule, $\bold{d}_a$ is the displacement between positive and negative charges and $\rho_+ = nq$ the density of positive charges per unit volume generated int he polarized region.
+
+The absence of an electric field implies the polarization is zero since dipoles are randomly polarized. However, if there is an electric field, the dipole moment is non-zero.
+
+#### Polarization Current
+
+Since we are considering the electric field's effect on a dielectric material (which has bound charges), we consider a time varying electric field $\bold{E} = E_o \cos{\omega t} \bold{a}_z$.
+
+$$\bold{P} = \epsilon_o \chi_e \bold{E} = \epsilon_o \chi_e E_o \cos{\omega t} \bold{a}_z$$ 
+
+#### Polarization Charge Density
