@@ -31,19 +31,12 @@ The Biot-Savart Law quantifies the generation of a magnetic field from a constan
 
 $$d\bold{F}_m = md \bold{B} = m\mu_0 \frac{I dl \times a_R}{4\pi r^2}$$
 
-| Variable | Meaning |
-| -------  | ------- |
-| 
+$$\bold{B}(\bold{r}) = \frac{\mu_0}{4 \pi} \int_c \frac{I d\bold{l} \times \bold{a}_R}{|a_R|^2} $$
 
 # Lorentz Force
 
-# Lenz's Law
-
-Induced emf is in such a way that opposes the change in magnetic flux.
-
 $$\bold{F} = q \bold{v} \times \bold{B}$$
 
-$$\bold{B}(\bold{r}) = \frac{\mu_0}{4 \pi} \int_c \frac{I d\bold{l} \times \bold{a}_R}{|a_R|^2} $$
 
 # Electric Field
 
@@ -111,6 +104,10 @@ The induced electromagnetic force (voltage) over a closed contour $c$ is caused 
 
 Note:
 - The voltage resists the change in magnetic field, hence the negative sign.
+
+#### Lenz's Law
+
+Induced emf is in such a way that opposes the change in magnetic flux.
 
 #### Integral Form
 
@@ -248,4 +245,30 @@ Since we are considering the electric field's effect on a dielectric material (w
 
 $$\bold{P} = \epsilon_o \chi_e \bold{E} = \epsilon_o \chi_e E_o \cos{\omega t} \bold{a}_z$$ 
 
+The polarization is the dipole moment per unit volume is given by:
+
+$$\bold{P} \Delta v = \epsilon_o \chi_e d \Delta x \Delta y E_o \cos{\omega t} \bold{a}_z$$ 
+
+$$q = \epsilon_o \chi_e \Delta x \Delta y E_o \cos{\omega t}$$
+
+Thus, the polarization current is:
+
+$$\bold{J} = \frac{\bold{I}}{\Delta x \Delta y} = \frac{1}{\Delta x \Delta y} \frac{dq}{dt} \bold{a}_z = -\omega \epsilon_o \chi_e \sin{\omega t} \bold{a}_z$$
+
+$$\bold{J}_p = \frac{\partial \bold{P}}{\partial t} = \frac{\partial{\epsilon_o \chi_e \bold{E}}}{\partial t}$$
+
 #### Polarization Charge Density
+
+When an external electric field is applied to a dielectric material, dipole moments will be induced and the material will subsequently be polarized. 
+
+The polarization over the area is equal to the positive polarization positive charge density over the volume enclosed by the area.
+
+$$\oint_s \bold{P} \cdot ds = -\int_v \rho_p dv$$
+
+In point form:
+
+$$\bold{\nabla} \cdot \bold{P} = -\rho_p$$
+
+## Modifications to Maxwell's Equations
+
+## Ampere's Law
