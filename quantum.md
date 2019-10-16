@@ -7,7 +7,7 @@ description: Physics for small things.
 
 In quantum mechanics, a photon's energy is released in discrete packets of energy called quanta.
 
-It is characterized by the equation:
+The energy of a photon is characterized by the equation:
 
 $$E = hv = \frac{hc}{v}$$
 
@@ -19,7 +19,7 @@ $$E = hv = \frac{hc}{v}$$
 
 ### Maximum Kinetic Energy of Photoelectron (Photoelectric Effect)
 
-The **photoelectric effect** describes the event when photoelectrons are emitted when photons fall incident to a material. It states that it takes a minimum amount of energy, $\Phi$, the work function, to remove the electron from the material's surface.
+The **photoelectric effect** describes the event when photoelectrons are emitted and the photons fall incident to a material. It states that it takes a minimum amount of energy, $\Phi$, the work function, to remove the electron from the material's surface.
 
 $$K = \frac{1}{2}mv^2 = hv - \Phi = hv - hv_0$$
 $$v \geq v_0$$
@@ -110,7 +110,7 @@ If a particle is in free space, it has no external forces acting on itself. It i
 
 Therefore, we assume:
 
-- $V(x) = \text{constant}$, the potential energy is zero.
+- $V(x) = 0$, the potential energy is zero.
 - $E > V(x)$
 
 The time-independent wave equation is now:
@@ -119,7 +119,7 @@ $$\frac{\partial^2 \psi(x)}{\partial x^2} + \frac{2mE}{\hbar^2} \psi(x) = 0$$
 
 with the solution
 
-$$\psi(x) A e^{\frac{jx\sqrt{2mE}}{\hbar}} + B e^{\frac{jx\sqrt{2mE}}{\hbar}} = A e^{jkx} + B e^{-jkx}$$
+$$\psi(x) = A e^{\frac{jx\sqrt{2mE}}{\hbar}} + B e^{\frac{jx\sqrt{2mE}}{\hbar}} = A e^{jkx} + B e^{-jkx}$$
 
 $$k = \sqrt{\frac{2mE}{\hbar^2}}$$
 
@@ -161,6 +161,8 @@ $$E = E_n = \frac{\hbar^2 n^2 \pi^2}{2ma^2}, n=1,2,3,...$$
 $$\psi(x) = \sqrt{\frac{2}{a}} \sin k_n x$$
 
 ### Step Potential Function
+
+We assume that $E < V_0$.
 
 In this case, the flux of particles is incident on a potential barrier with $E < V_0$, traveling from $-\infty$ in the $+x$ direction. The step potential function follows Schrodinger's time independent equation:
 

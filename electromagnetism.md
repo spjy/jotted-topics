@@ -261,7 +261,7 @@ $$\bold{J}_p = \frac{\partial \bold{P}}{\partial t} = \frac{\partial{\epsilon_o 
 
 When an external electric field is applied to a dielectric material, dipole moments will be induced and the material will subsequently be polarized. 
 
-The polarization over the area is equal to the positive polarization positive charge density over the volume enclosed by the area.
+The polarization over the area is equal to the induced charge distribution over the volume enclosed by the area.
 
 $$\oint_s \bold{P} \cdot ds = -\int_v \rho_p dv$$
 
@@ -269,6 +269,33 @@ In point form:
 
 $$\bold{\nabla} \cdot \bold{P} = -\rho_p$$
 
-## Modifications to Maxwell's Equations
+### Magnetization
 
-## Ampere's Law
+
+
+## Modifications to Maxwell's Equations in Materials
+
+### Ampere's Law
+
+We will add the [polarization current](#polarization-current) term:
+
+$$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial (\epsilon_0 \bold{E})}{\partial t} + \frac{\partial \bold{P}}{\partial t}$$
+
+Additionally, we must replace the permeability of free space constant to take into account the material:
+
+$$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial \bold{D}}{\partial t}$$
+
+$$\bold{D} = \epsilon_o \epsilon_r \bold{E}$$
+
+where $\epsilon_r = 1 + \chi_e$ is the suseptability of material to store electric energy due to induced polarization.
+
+### Gauss's Law for Electric Field
+
+We will add the induced charge distribution:
+
+$$\bold{\nabla} \cdot \epsilon_o \bold{E} = \rho_v + \rho_p \implies \bold{\nabla} \cdot \epsilon_o \bold{E} = \rho_v + \bold{\nabla} \cdot \bold{P}$$
+
+Simplifying:
+
+$$\bold{\nabla} \cdot (\epsilon_o \bold{E} + \bold{P}) = \rho_v$$
+

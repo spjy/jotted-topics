@@ -103,9 +103,25 @@ $$|\bar{r}| = [xyz]$$
 
 where $\text{xyz}$ is the vector perpendicular to the surface of the crystal plane.
 
+### Characterization of Families
+
+$$\{ r \} = \{ xyz \}$$
+
 # Diamond Structure
 
 # Quantum Theory of Solids
+
+### K-Space Diagram
+
+$$k= \frac{p}{\hbar} = \alpha$$
+
+#### Free Particle
+
+$$E=\frac{p^2}{2m}=\frac{k^2 \hbar^2}{2m}$$
+
+#### Single Crystal Lattice
+
+$$f(\alpha a) = P' \frac{\sin{\alpha a}}{\alpha a} + \cos{\alpha a}$$
 
 ### Pauli Exclusion Principle
 
@@ -155,13 +171,13 @@ $$J = q \sum_{i=1}^N v_i$$
 
 where $v_i$ is the velocity of the $i$th ion.
 
-#### Electron Effective Mass
+### Electron Effective Mass
 
-An electron in a lattices experiences the forces:
+The force acting upon an electron is:
 
-$$F_{\text{total}} = F_{\text{external}} + _{\text{internal}} = ma$$
+$$F_{\text{total}} = F_{\text{external}} + F_{\text{internal}} = ma$$
 
-Simplifying the model, we have:
+In order to model the internal forces that an electron experiences in the lattice, we use effective mass. Applying the simplification of the model, we have:
 
 $$F_{\text{external}} = m^{*}a$$.
 
@@ -169,7 +185,7 @@ $m^*$ is the effective mass.
 
 Taking the energy of an electron in free space, we take the second derivative of energy with respect to $k$ to isolate $m$:
 
-$$E=\frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m} \implies \frac{1}{\hbar^2} \frac{d^2E}{dk^2} = \frac{1}{m^*}$$
+$$E=\frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m} \implies \frac{1}{\hbar} \frac{dE}{dk} = \frac{p}{m} = v \implies \frac{1}{\hbar^2} \frac{d^2E}{dk^2} = \frac{1}{m^*}$$
 
 #### Free Electron Mechanics
 
@@ -181,6 +197,8 @@ $$F = ma = -eE \implies a=\frac{-eE}{m}$$
 
 It is important to find the density of allowed energy states (based on the energy band theory) to calculate electron and hole concentrations.
 
+We can find the number of states per unit volume.
+
 #### Density of Allowed Electron Energy States in Conduction Band
 
 $$g_c(E) = \frac{4 \pi (2m^*_n)^{3/2}}{h^3} \sqrt{E - E_c} \qquad E \geq E_c$$
@@ -191,12 +209,44 @@ As the nergy of the elctron in the conduction band decreases, the number of quan
 
 $$g_c(E) = \frac{4 \pi (2m^*_v)^{3/2}}{h^3} \sqrt{E_v - E} \qquad E \leq E_v$$
 
-### Statistical Mechanics
+#### Finding Number of Quantum States Between Energy States
 
-#### Fermi-Dirac Probability Function
+$$N = \int g(E) dE$$
 
-The Fermi-Dirac probability function considers particles to be indistinguishable. It includes all of the permutations of $N$ particles; also, it ocnsiders the $i$th energy level with $g_i$ quantum states.
+## Statistical Mechanics
 
-#### Maxwell-Boltzmann Probability Function
+### Fermi-Dirac Probability Function
+
+The Fermi-Dirac probability function considers particles to be indistinguishable. It includes all of the permutations of $N$ particles; also, it considers the $i$th energy level with $g_i$ quantum states.
+
+$$\frac{N(E)}{g(E)} = f_F (E) = \frac{1}{1+ e^{\frac{E-E_F}{kT}}}$$
+
+where $N(E)$ is the number of particles per unit volume, while $g(E)$ is the number of quantum states per unit volume.
+
+#### Fermi-Dirac Function in Conduction Band
+
+Therefore, the Fermi-Dirac function $f_F (E)$ gives the probability that a quantum state at energy $E$ will be occupied by an electron.
+
+#### Fermi-Dirac Function in Valence Band
+
+As a result, $f_F (E)$ will only be used in the conduction band since we are considering only electrons in the conduction band.
+
+On the other hand, we will use $1 - f_F (E)$ in the valence band since we are considering holes in the valence band.
+
+### Maxwell-Boltzmann Approximation Function
 
 This function considers particles to be numbered from $1 \rightarrow N$ with no limit to the number of particles allowed in each energy state.
+
+We extend the [Fermi-Dirac probability function](#fermi-dirac-probability-function) and approximate the case where $E - E_F >> kT$. In this case, 
+
+$$f_F(E) \approx e^{\frac{-(E - E_F)}{kT}}$$
+
+### Distribution of Electrons
+
+With respect to energy, the distribution of electrons per unit volume in the conduction band is:
+
+$$n(E) = g_c(E) f_F(E)$$
+
+Based on this equation, we can find the number of electrons in the conduction band by integrating:
+
+$$\int n(E) = n_o = \int g_c(E) f_F(E) dE$$
