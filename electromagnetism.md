@@ -271,23 +271,52 @@ $$\bold{\nabla} \cdot \bold{P} = -\rho_p$$
 
 ### Magnetization
 
+Magnetization is the alignment of atomic magentic dipole moments along the direction of the applied magnetic field.
 
+The magnetic dipole moment is given by the current multiplied by the differential element of area $ds$ encircled by the current:
+
+$$\bold{m} = I d\bold{s}$$
+
+Without an external magnetic field, magnetic dipole moments are randomly oriented so $\bold{m} = 0$ in the volume.
+
+With an external magnetic field, a torque will be applied on the dipole moments.
+
+Magnetization is the total magnetic moment per unit volume:
+
+$$M = \lim_{\Delta v \rightarrow 0} \frac{1}{\Delta v} \sum_{i = 0}^{n \Delta v} \bold{m}_i = n \bold{m}_a = n\bold{I} d\bold{s}$$
+
+The torque is on the dipole is defined by:
+
+$$d\bold{T} = \bold{m} \times \bold{B}$$
+
+#### Magnetization Current Density
 
 ## Modifications to Maxwell's Equations in Materials
 
-### Ampere's Law
+### Ampere's Law, Polarization Current
 
 We will add the [polarization current](#polarization-current) term:
 
-$$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial (\epsilon_0 \bold{E})}{\partial t} + \frac{\partial \bold{P}}{\partial t}$$
+$$\bold{\nabla} \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial (\epsilon_0 \bold{E})}{\partial t} + \frac{\partial \bold{P}}{\partial t}$$
 
 Additionally, we must replace the permeability of free space constant to take into account the material:
 
-$$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial \bold{D}}{\partial t}$$
+$$\bold{\nabla} \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial \bold{D}}{\partial t}$$
 
 $$\bold{D} = \epsilon_o \epsilon_r \bold{E}$$
 
 where $\epsilon_r = 1 + \chi_e$ is the suseptability of material to store electric energy due to induced polarization.
+
+### Ampere's Law, Magnetization Current
+
+We will add the [magnetization current](#magnetization-current-density) term.
+
+$$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial \bold{D}}{\partial t} + \bold{J}_m = \bold{J} + \frac{\partial \bold{D}}{\partial t} + \bold{\nabla} \times \bold{M}$$
+
+Simplifying:
+
+$$\bold{\nabla} \times \bold{H} = \bold{J} + \frac{\partial \bold{D}}{\partial t}$$
+$$\bold{H} = \frac{\bold{B}}{\mu_o} - \bold{M}$$
 
 ### Gauss's Law for Electric Field
 
@@ -297,5 +326,21 @@ $$\bold{\nabla} \cdot \epsilon_o \bold{E} = \rho_v + \rho_p \implies \bold{\nabl
 
 Simplifying:
 
-$$\bold{\nabla} \cdot (\epsilon_o \bold{E} + \bold{P}) = \rho_v$$
+$$\bold{\nabla} \cdot \bold{D} = \rho_v$$
+
+## Complex Permittivity
+
+Complex permittivity characterizes the heating losses associated with the frictional losses due to the rotation of electric dipoles due to the application of a time varying electric field in a dielectric.
+
+The capacitance contains the complex permittivity.
+
+$$c=\frac{\epsilon^* A}{d}$$
+
+## Boundary Conditions
+
+Boundary conditions describe the transitional properties of the electric and magnetic fields between different materials.
+
+It will be solved for by solving for the tangential and normal components.
+
+### 
 
