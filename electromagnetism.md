@@ -131,7 +131,7 @@ $$I_{enc} = \oint_c \frac{\bold{B}}{\mu_0} \cdot d\bold{l} = \int_s \bold{J} \cd
 
 $$\nabla \times \frac{\bold{B}}{\mu_0} = \bold{J} + \frac{\partial (\epsilon_0 \bold{E})}{\partial t}$$
 
-# Wave Equation in Source Free Region
+# Wave Propagation in Source Free Region
 
 ### Source Free Region
 
@@ -156,6 +156,42 @@ $$\bold{\nabla}^2 \bold{B} - \mu_0 \epsilon_0 \frac{\partial^2 \bold{B}}{\partia
 ### Harmonic Fields in Phasor Representation
 
 Representing fields in the phasor form are useful for sinusoidal steady state analysis. However, because the phasor form is dependent solely on position (not time), it is incomplete for wave propagation analysis.
+
+### Characteristics
+
+#### Wavelength
+
+$$\lambda = \frac{2 \pi}{\beta_0}$$
+
+#### Wave Velocity
+
+$$v_p = \frac{1}{\sqrt{\epsilon_o \mu_o}} = c$$
+
+#### Phase Constant
+
+$$\beta_o = \omega \sqrt{\epsilon_o \mu_o}$$
+
+#### Intrinsic Impedence
+
+$$\frac{\hat{E}_x}{\hat{H}_y} = \eta_o = \sqrt{\mu_o}{\epsilon_o}$$
+
+### General Solution to Maxwell's Equations in Phasor Form
+
+$$\hat{E}_x = \hat{E}_m e^{-j \beta_o z} + \hat{E}_m e^{j \beta_o z}$$
+
+### General Solution to Maxwell's Equations in Real Time Form
+
+$$E_x(z, t) = \mathcal{Re} \{ \hat{E}_x e^{j\omega t} \} = E_m \cos{(\omega t - \beta_o z)} + E_m \cos{(\omega t + \beta_o z)} $$
+
+### Polarization State
+
+#### Linear Polarization
+
+#### Circular Polarization
+
+#### Elliptical Polarization
+
+
 
 # Maxwell's Equations and Plane Wave Propagation in Materials
 
@@ -189,7 +225,7 @@ The process of aligning current loops causes an induced source called the **magn
 
 ### Conduction Current (Conductors)
 
-Conduction current is generated due to an application of an external electric field $\bold{E}$ on a conducting material. It is related to the drift of the free charges.
+Conduction current is generated due to an application of an external electric field $\bold{E}$ on a conducting material. It is related to the movement drift of the free charges since its movement is confined within a lattice.
 
 Electrons not in free space do not accelerate due to the electric field; rather, they are assumed to be contained in the atomic structure of the material. Therefore, they are free to move inside the material but bounce off of the walls of the atomic lattice and induce friction.
 
@@ -207,7 +243,9 @@ where $\sigma$ is the conductivity of the material.
 
 There are three different types of polarization due to the application of external electric field $\bold{E}$ on a dielectric material. It is related to the displacement of bound charges. 
 
-Electrons within the dielectric material stores electric energy because of the shifts in the positions of the positive and negatives charges against normal molecular and atomic forces. The charge displacement is called polarization.
+Electrons within the dielectric material stores electric energy because of the shifts in the positions of the positive and negatives charges against normal molecular and atomic forces.
+
+Charges in dielectrics are bound (not free to move), so they are displaced; the charge displacement is called polarization.
 
 #### Electronic Polarization
 
@@ -245,15 +283,7 @@ Since we are considering the electric field's effect on a dielectric material (w
 
 $$\bold{P} = \epsilon_o \chi_e \bold{E} = \epsilon_o \chi_e E_o \cos{\omega t} \bold{a}_z$$ 
 
-The polarization is the dipole moment per unit volume is given by:
-
-$$\bold{P} \Delta v = \epsilon_o \chi_e d \Delta x \Delta y E_o \cos{\omega t} \bold{a}_z$$ 
-
-$$q = \epsilon_o \chi_e \Delta x \Delta y E_o \cos{\omega t}$$
-
 Thus, the polarization current is:
-
-$$\bold{J} = \frac{\bold{I}}{\Delta x \Delta y} = \frac{1}{\Delta x \Delta y} \frac{dq}{dt} \bold{a}_z = -\omega \epsilon_o \chi_e \sin{\omega t} \bold{a}_z$$
 
 $$\bold{J}_p = \frac{\partial \bold{P}}{\partial t} = \frac{\partial{\epsilon_o \chi_e \bold{E}}}{\partial t}$$
 
@@ -341,6 +371,4 @@ $$c=\frac{\epsilon^* A}{d}$$
 Boundary conditions describe the transitional properties of the electric and magnetic fields between different materials.
 
 It will be solved for by solving for the tangential and normal components.
-
-### 
 
