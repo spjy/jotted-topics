@@ -271,6 +271,93 @@ $$w=\frac{1}{2} Cv^2 = \frac{q^2}{2C}$$
 
 In DC conditions, if its voltage is not changing with respect to time, a capacitor acts like an open circuit.
 
+This is because in DC conditions, voltage does not change with respect to time, so $\frac{dv}{dt} = 0$:
+
+$$i = C \frac{dv}{dt} = C * 0 = 0$$
+
 # Inductor
 
 An inductor is a linear two terminal passive circuit element that stores energy in its magnetic field. It consists of a coiled conducting wire.
+
+# Alternating Current (AC) Analysis
+
+AC analysis is the study of circuits with time varying sinusoidal sources.
+
+## Sinusoids
+
+A sinusoid is a type of function that oscillates.
+
+$$v(t) = V_m \sin{(\omega t + \phi)}$$
+
+where $V_m$ is the amplitude, $\omega$ is the angular frequency and $\omega t$ is the argument.
+
+### Period ($T$)
+
+The period describes how often the sinusoid repeats itself every $T$ seconds.
+
+$$T = \frac{2 \pi}{\omega}$$
+
+A function is said to be periodic if it satisfies the contraint that
+
+$$v(t) = v(t+nT)$$
+
+### Frequency ($f$)
+
+The frequecy describes how often a wave repeats itself.
+
+$$f = \frac{1}{T}$$
+
+### Phase ($\phi$)
+
+The phase describes the shift in the wave along the $x$ axis.
+
+Given two sinusoids such that $phi \dne 0$,
+
+$$v_1(t) = V_m \sin{\omega t}$$
+$$v_2(t) = V_m \sin{(\omega t + \phi)}$$
+
+- $v_2$ leads $v_1$
+- $v_1$ lags $v_2$
+- $v_1$ and $v_2$ are out of phase
+- If $\phi = 0$, the sinusoids are in phase.
+
+## Phasor Analysis
+
+We use phasors, a complex number that represents the amplitude and phase of a sinusoid, to make analysis easier. 
+
+### Representations
+
+All three forms are related by the equations:
+
+$$r = \sqrt{x^2 + y^2}$$
+$$\phi = \tan^{-1} \frac{y}{x}$$
+$$x = r\cos{\phi}$$
+$$y = r \sin{\phi}$$
+
+$$z = x + jy = r \angle \phi = r(\cos{\phi} + j \sin{\phi}$$
+
+These forms are possible in part by Euler's identity.
+
+#### Euler's Identity
+
+$$e^{\pm j\phi} = \cos{\phi} \pm j \sin{\phi}$$
+$$\cos\phi = \mathbb{R}e \{e^{j \phi}\}$$
+$$\sin\phi = \mathbb{I}m \{e^{j \phi)\}
+
+#### Rectangular Form
+
+$$z = x + jy$$
+
+#### Polar Form
+
+$$z = r \angle \phi$$
+
+#### Exponential Form
+
+$$z = re^{j\phi}$$
+
+### Transformations
+
+$$\frac{dv}{dt} \quad \iff \quad j\omega\bold{V}$$
+
+$$\int v \text{ } dt \quad \iff \quad \frac{\bold{V}}{j\omega}$$
