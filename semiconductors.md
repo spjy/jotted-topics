@@ -250,3 +250,11 @@ $$n(E) = g_c(E) f_F(E)$$
 Based on this equation, we can find the number of electrons in the conduction band by integrating:
 
 $$\int n(E) = n_o = \int g_c(E) f_F(E) dE$$
+
+## Charge Carriers in Semiconductors
+
+In order to understand the current, we will examine the contribution of electrons and holes to current.
+
+### Equilibrium Distribution of Electrons and Holes
+
+

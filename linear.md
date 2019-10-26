@@ -54,12 +54,35 @@ a_{m1} & a_{m2} & \dots & a_{mn} & b_n \\
 3. Starting from the top left, the leading one (1) appears to the right of the leading one (1) of the preceding row.
 4. All other entries of a column containing a leading one (1) is zero (0).
 
-## Matrices
+## Scalars
 
-A matrix is a collection of numbers with a fixed number of rows and columns, of the form:
+A scalar is a single number.
+
+## Vectors
+
+A vector is column of an array numbers.
 
 ### Notation
-$$ A =
+
+$$ \bold{A} =
+\left[
+\begin{array}{c}
+x_1 \\
+x_2 \\
+\vdots \\
+x_n
+\end{array}
+\right]$$
+
+where $n$ is the number of rows in the vector.
+
+## Matrices
+
+A matrix is a two dimensional collection of numbers with a fixed number of rows and columns, of the form:
+
+### Notation
+
+$$ \bold{A}_{mn} =
 \left[
 \begin{array}{ccccc}
 a_{11} & a_{12} & \dots & a_{1n} \\
@@ -73,7 +96,7 @@ where $A$ is an $m \times n$ matrix and $m$ are the rows and $n$ are the columns
 
 More generally,
 
-$$A =
+$$\bold{A} =
 \left[
 \begin{array}{c}
 a_{ij} 
@@ -82,9 +105,19 @@ a_{ij}
 
 $A$ is an $i \times j$ matrix where $i$ is the number of rows and $j$ is the number of columns.
 
-### Properties
+### Rows
 
-#### Addition
+$\bold{A}_{i,:}$ denotes the $i$-th row of matrix $A$.
+
+### Columns
+
+$\bold{A}_{:,j}$ denotes the $j$-th column of matrix $A$.
+
+### Entries
+
+$\bold{A}_{i,j}$ denotes the $(i,j)$-th element of matrix $A$.
+
+### Properties
 
 Let
 
@@ -102,7 +135,16 @@ b_{ij}
 \end{array}
 \right]$$
 
-Now,
+$$C =
+\left[
+\begin{array}{c}
+c_{ij} 
+\end{array}
+\right]$$
+
+and $c,d$ be scalars.
+
+#### Addition
 
 $$A + B =
 \left[
@@ -110,3 +152,50 @@ $$A + B =
 a_{ij} + b_{ij}
 \end{array}
 \right]$$
+
+#### Scalar Product
+
+$$
+c\bold{A} =
+c \left[
+\begin{array}{c}
+a_{ij}
+\end{array}
+\right]
+=
+\left[
+\begin{array}{c}
+c a_{ij}
+\end{array}
+\right]
+$$
+
+#### Commutativity
+
+$$\bold{A} + \bold{B} = \bold{B} + \bold{A} \text{}$$
+
+#### Associativity
+
+$$\bold{A} + (\bold{B} + \bold{C}) = (\bold{A} + \bold{B}) + \bold{C} \text{}$$
+
+#### Scalar Distributivity
+
+$$c(d\bold{A}) = (cd)\bold{A}$$
+
+$$c(\bold{A} + \bold{B}) = c\bold{A} + d \bold{B}$$
+
+$$(c + d) \bold{A} = c \bold{A} + d \bold{A}$$
+
+#### Negativity
+
+$$-\bold{A} =
+\left[
+\begin{array}{c}
+- a_{ij}
+\end{array}
+\right]
+$$
+
+## Tensors
+
+A tensor is a generalized form of vectors and scalars.

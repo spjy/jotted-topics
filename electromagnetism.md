@@ -372,3 +372,23 @@ Boundary conditions describe the transitional properties of the electric and mag
 
 It will be solved for by solving for the tangential and normal components.
 
+## Poynting Vector
+
+The Poynting vector describes the energy flux, or energy transfer per unit area, associated with the propagation of electromagnetic waves. 
+
+$$\bold{P_p} = \bold{E} \times \bold{H}$$
+
+For practicality, we will take the time average Poynting vector.
+
+### Time Average Poynting Vector Real Time Form
+
+$$\bold{P}_av (z) = \frac{1}{t_2 - t_1} \int_{t_1}^{t_2} \bold{P}(z, t) dt $$
+
+### Time Average Poynting Vector Real Time Form (Sinusoid)
+
+$$\bold{P}_av (z) = \frac{1}{T} \int_{0}^{T} \bold{P}(z, t) dt $$
+
+### Complex Poynting Vector for Time Harmonic Fields
+
+$$\bold{P}_az (z) = \frac{1}{2} \mathcal{Re} \{ \bold{\hat{E}} \times \bold{\hat{H}}^* \} = \frac{1}{2} \mathcal{Re} \{ (E_r + jE_i) \bold{a}_x \times (H_r + jH_i) \bold{a}_y \} = \frac{1}{2} (E_r H_r + E_i H_i) \bold{a}_z $$
+
