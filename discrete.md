@@ -589,3 +589,188 @@ $n$ being divisible by $d$ also means:
 If $n, d \in \mathbb{Z}$, $d$ divides $n$ is denoted as $d \mid n$.
 
 $d \mid n \iff \exists$ an integer $k$ such that $n = dk$.
+
+# Sequences
+
+### Finite Sequence
+
+$$a_m, a_{m+1}, a_{m+2}, \dots, a_n$$
+
+### Infinite Sequence
+
+$$a_m, a_{m+1}, a_{m+2}, \dots, a_n$$
+
+### Explicit Formula
+
+A sequence showing how $a_k$ depends on $k$.
+
+### Summation Notation
+
+$$\sum_{k=m}^n a_k = a_m + a_{m+1} + a_{m+2} + \dots + a_n$$
+
+### Product Notation
+
+$$\prod_{k=m}^n a_k = a_m \cdot a_{m+1} \cdot a_{m+2} \cdot \dots \cdot a_n$$
+
+### Factorial
+
+For $n \in \mathbb{Z}^+$,
+
+$$n! = n \cdot (n-1) \dots 3 \cdot 2 \cdot 1$$
+
+#### Zero Factorial
+
+$$0! = 1$$
+
+### Choose (Combinations)
+
+For $n, r \in \mathbb{Z}^+$ and $0 \leq r \leq n$,
+
+$$
+\left(
+\begin{array}{c}
+n \\
+r
+\end{array}
+\right) =
+\frac{n!}{r! (n - r)!}
+$$
+
+The notation is said as $n$ choose $r$. It represents a combination where order in a set does not matter for the number of possibilities.
+
+# Functions
+
+A function describes a dependence of a varying quantity to another. Give a function $f$ from a set $x$ ([domain](#domain)) to a set $y$ ([co-domain](#co-domain)), then $f$ maps $x$ to $y$:
+
+$$f: x \rightarrow y$$
+
+$$f(x) = y$$
+
+### Constraints
+
+- Every element in $x$ is related to some element $y$.
+- No element in $x$ is related to more than one element $y$.
+
+### Domain (Preimage)
+
+The domain $x$ is the possible input values of $f$.
+
+### Co-domain
+
+The co-domain $y$ is the possible output values of $f$.
+
+### Range (Image)
+
+The range is the set of all values of $f$ that are actually output. It is a subset of the [co-domain](#co-domain).
+
+## Types of Functions
+
+### One-to-One (Injective)
+
+A one-to-one function means that each element in the domain $x$ maps to a unique element in the co-domain $y$.
+
+Let $f$ be a function from a set $x$ to set $y$.
+
+$$f: x \rightarrow y \text{ is one-to-one} \iff \forall x_1, x_2 \in x, f(x_1) = f(x_2) \rightarrow x_1 = x_2$$
+
+### Onto (Surjective)
+
+A surjective function is one in which for every $x_n \in x$ you there is a corresponding element $y_n \in y$. In other words, the range is equal to the co-domain.
+
+$$f:x \rightarrow y \text{ is onto} \iff \forall y_n \in y, \exists x_n \in x \mid f(x) = y$$
+
+### One-to-One Correspondence (Bijection)
+
+A bijective function is both [injective](#one-to-one-injective) and [surjective](#onto-surjective).
+
+### Inverse
+
+Given a bijective function $f: x\rightarrow y$, 
+
+$$f^{-1}(y) = x \iff y = f(x)$$
+
+### Power Function
+
+$$p_a(x) = x^a \quad \forall x \in \mathbb{R}^+$$
+
+# Graph Theory
+
+### Graph
+
+A graph is a structure of discrete objects with connections between them.
+
+### Vertices
+
+The discrete objects.
+
+### Edges
+
+The connections joining vertices.
+
+### Endpoints
+
+Each edge is associated with a set of either one or two vertices.
+
+### Loops
+
+An edge with one endpoint.
+
+### Parallel 
+
+An endpoint that shares two or more distinct edges.
+
+### Connectedness
+
+An edge connects two endpoints.
+
+### Adjacent
+
+Two vertices that are connected by an edge.
+
+### Incident
+
+An edge is incident to a vertex.
+
+### Isolation
+
+A vertex with no edges.
+
+### Degree
+
+## Types of Graphs
+
+### Directed Graph (digraph)
+
+### Simple Graph
+
+### Complete Graph
+
+### Complete Bipartite Graph
+
+### Subgraph
+
+## Applications
+
+### Walks
+
+#### Closed Walk
+
+### Trails
+
+#### Euler Trail
+
+### Paths
+
+### Circuit
+
+#### Simple Circuit
+
+#### Hamiltonian Circuit
+
+# Algorithm Analysis
+
+### Big Omega
+
+### Big O
+
+### Big Theta
