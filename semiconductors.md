@@ -261,7 +261,7 @@ $$n(E) = g_c(E) (1 - f_F(E))$$
 
 Based on this equation, we can find the **concentration of electrons** in each band by integrating the [distribution of electrons](#distribution-of-electrons).
 
-#### Conduction Band Electron Concentration
+#### Conduction Band Hole Concentration
 
 $$\int n(E) = n_o = \int_{E_c}^{E + E_c} g_c(E) f_F(E) dE = N_c e^{\frac{-(E_c - E_F)}{kT}} $$
 
@@ -293,14 +293,48 @@ $$E_{Fi} = E_{midgap} + \frac{3}{4} kT \ln{\bigg(\frac{m_p^*}{m_n^*}\bigg)} $$
 
 ### Doping
 
-Doping a semiconductor means that we alter the semiconductor by adding impurity atoms to improve it.
+Doping a semiconductor means that we alter the semiconductor by adding substitutional impurity atoms to increase or decrease its conductivity. 
 
 ### Extrinsic Semiconductor
 
 If an [intrinsic semiconductor](#intrinsic-semiconductor) is doped with an impurity atom, it becomes an **extrinsic semiconductor**.
 
-
-
 ### Donor Impurity Atoms
 
-If an atom has an extra valence electron 
+If a semiconductor is doped with an atom that contains extra electrons and it donates those electrons to the conduction band (and does not create holes in the valence band), it is said to be a **donor impurity atom**.
+
+An example of this would be if an Si semiconductor, a group IV element, was doped with a group V element (like Phosphorous).
+
+#### Donor Ionization Energy
+
+As a result of an atom donating its extra electrons, it therefore becomes ionized positively.
+
+### Acceptor Impurity Atoms
+
+If a semiconductor is doped with an atom that contains an empty spot in its electron shell and it is able to take electrons from the valence band (e.g. by creating holes in the valence band), it is said to be an **acceptor impurity atom**.
+
+An example of this would be if an Si semiconductor, a group IV element, was doped with a group III element (like Boron).
+
+#### Acceptor Ionization Energy
+
+As a result of an atom accepting extra electrons from the semiconductor, it therefore becomes ionized negatively.
+
+### Amphoteric Impurity Atoms
+
+An **amphoteric impurity atom** is one that, depending on what atom it replaces, it can either be a donor or acceptor.
+
+### n-type Semiconductors
+
+If the electron concentration is greater than the hole concentration ($n_0 > p_0$), the semiconductor is an **n-type**.
+
+### p-type Semiconductors
+
+If the hole concentration is greater than the electron concentration ($n_0 < p_0$), the semiconductor is a **p-type**.
+
+### $n_0 p_0$ product
+
+$$n_0 p_0 = n_i^2
+
+### Degenerate Semiconductors
+
+
