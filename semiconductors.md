@@ -241,20 +241,66 @@ We extend the [Fermi-Dirac probability function](#fermi-dirac-probability-functi
 
 $$f_F(E) \approx e^{\frac{-(E - E_F)}{kT}}$$
 
-### Distribution of Electrons
-
-With respect to energy, the distribution of electrons per unit volume in the conduction band is:
-
-$$n(E) = g_c(E) f_F(E)$$
-
-Based on this equation, we can find the number of electrons in the conduction band by integrating:
-
-$$\int n(E) = n_o = \int g_c(E) f_F(E) dE$$
+# Semiconductor in Equilibrium
 
 ## Charge Carriers in Semiconductors
 
 In order to understand the current, we will examine the contribution of electrons and holes to current.
 
-### Equilibrium Distribution of Electrons and Holes
+### Distribution of Electrons
+
+With respect to energy, the **distribution of electrons per unit volume** in the conduction band is:
+
+$$n(E) = g_c(E) f_F(E)$$
+
+And in the valence band:
+
+$$n(E) = g_c(E) (1 - f_F(E))$$
+
+### Concentration of Electrons
+
+Based on this equation, we can find the **concentration of electrons** in each band by integrating the [distribution of electrons](#distribution-of-electrons).
+
+#### Conduction Band Electron Concentration
+
+$$\int n(E) = n_o = \int_{E_c}^{E + E_c} g_c(E) f_F(E) dE = N_c e^{\frac{-(E_c - E_F)}{kT}} $$
+
+#### Valence Band Electron Concentration
+
+$$\int n(E) = p_o = \int_{E_v - E}^{E_v} g_c(E) (1 - f_F(E)) dE = N_v e^{\frac{-(E_F - E_v)}{kT}} $$
+
+### Intrinsic Semiconductor
+
+An intrinsic semiconductor is one in which no impurities or imperfections are present.
+
+#### Electron Concentration in an Intrinsic Semiconductor
+
+In other words, the concentration of electrons in the conduction band is equal to the holes in the valence band, $n_i = p_i$ ($i$ = intrinsic).
+
+#### Fermi Energy Level in an Intrinsic Semiconductor
+
+The Fermi Energy level in an intrinsic semiconductor $E_{Fi}$ lies near the mid-gap between the conduction band and valence band.
+
+We can calculate the exact location by equating the [conduction band electron concentration](#conduction-band-electron-concentration) and [valence band electron concentration](#valence-band-electron-concentration).
+
+$$E_{Fi} = E_{midgap} + \frac{3}{4} kT \ln{\bigg(\frac{m_p^*}{m_n^*}\bigg)} $$
+
+- $m_p^* = m_n^* \implies E_{Fi}$ is at the center. 
+- $m_p^* > m_n^* \implies E_{Fi}$ is above center. 
+- $m_p^* < m_n^* \implies E_{Fi}$ is below center. 
+
+## Dopant Atoms and Energy Levels
+
+### Doping
+
+Doping a semiconductor means that we alter the semiconductor by adding impurity atoms to improve it.
+
+### Extrinsic Semiconductor
+
+If an [intrinsic semiconductor](#intrinsic-semiconductor) is doped with an impurity atom, it becomes an **extrinsic semiconductor**.
 
 
+
+### Donor Impurity Atoms
+
+If an atom has an extra valence electron 
