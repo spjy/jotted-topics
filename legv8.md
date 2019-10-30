@@ -52,7 +52,6 @@ A stack is a portion of memory allocated towards a program.
 
 # Computer Instruction Representation
 
-
 ### Instruction
 
 A series of 32 binary bits that represent an instruction.
@@ -290,3 +289,47 @@ A library that is linked to a program during link time.
 #### Dynamically Linked Libraries
 
 A library routine that is linked to a program during execution time.
+
+# Building a Simple LEGv8 Computer
+
+## Arithmetic Logic Unit (ALU)
+
+The arithmetic logic unit handles various computational operations such as ANDing, ORing, adding, subtracting, NORing and passing inputs.
+
+| ALU Control Lines | Function |
+| -----------------   |
+| 0000 | AND          |
+| 0001 | OR           |
+| 0010 | add          |
+| 0110 | subtract     |
+| 0111 | pass input b |
+| 1100 | NOR          |
+
+# Pipelining
+
+## Datapath for LEGv8
+
+Instructions can be split up into five different stages in order to implement the pipeline. Since there are five stages, five instructions can be run each clock cycle.
+
+### Instruction Fetch
+
+Get the instruction from the program counter.
+
+### Instruction Decode / Register File Read
+
+Retrieve segments of instruction to see what the instruction type it is. Also read register values from the register file if needed.
+
+### Execution / Address Calculation
+
+Run any calculations.
+
+### Data Memory Access
+
+Access memory or write to memory.
+
+### Write Back
+
+Write data back into register file.
+
+## Data Hazards
+
