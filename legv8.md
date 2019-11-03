@@ -307,6 +307,8 @@ The arithmetic logic unit handles various computational operations such as ANDin
 
 # Pipelining
 
+Pipelining is a technique where multiple instructions are overlapped in execution. It is useful for shaving down time for a large amount of instructions since it increases instruction throughput (not decreasing execution time).
+
 ## Datapath for LEGv8
 
 Instructions can be split up into five different stages in order to implement the pipeline. Since there are five stages, five instructions can be run each clock cycle.
@@ -333,3 +335,16 @@ Write data back into register file.
 
 ## Data Hazards
 
+When an instruction is dependent on an earlier instruction still being processed in the pipeline. 
+
+### Forwarding
+
+A solution to data hazards is to add hardware to retrieve the missing item early from internal resources.
+
+### Stalling
+
+Another solution to solving the data hazard issue is to stall the pipeline, bubble or insert a `NOP` (no operation) instruction.
+
+### Predicting
+
+It can also try predicting
