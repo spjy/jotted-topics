@@ -199,3 +199,35 @@ $$
 ## Tensors
 
 A tensor is a generalized form of vectors and scalars.
+
+## Linear Combinations
+
+A linear combination is the sum of scalar multiples of vectors. Let $\bold{v}_1 \dots \bold{v}_n$ be vectors and $a_1 \dots a_n$ be scalars:
+
+$$a_1 \bold{v}_1 + a_2 \bold{v}_2 + \dots + a_n \bold{v}_n$$
+
+A reason why it is called a linear combination is because if you fix one vector and vary another by a scalar, the resulting vector draws out a straight line.
+
+### Basis
+
+The basis of a vector space is a set of linearly independent vectors that span the full space.
+
+### Span
+
+The set of all possible vectors you an reach with a linear combination of a given pair of vectors is the **span** of those two vectors.
+
+In other words, it is the set of all possible vectors you get by scaling each vector in some way and summing them.
+
+### Linearly Dependent
+
+A **linearly dependent** pair of vectors means that a vector does not contribute another dimension to the span. For example, if two vectors are added together and they both have the same span, they are linearly dependent; one vector can be expressed as a linear combination of the others.
+
+### Linearly Independent
+
+A **linearly independent** pair of vectors means that it contributes to the dimension of the span.
+
+## Linear Transformation
+
+A **linear transformation** is the act of inputting one vector and manipulating it such that you output a new vector.
+
+For instance if you rotate a vector a certain number of degrees.
