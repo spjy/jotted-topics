@@ -69,16 +69,19 @@ When only partial information is given and we want to know the outcome of an exp
 
 Let $A$ and $B$ be two events. The conditional probability of $A$ given $B$ is denoted as:
 
-$$\bold{P}(A|B)=\frac{\bold{P}(A \cap B)}{\bold{P}(B)}$$
+$$\bold{P}(A|B) = \frac{\bold{P}(A \cap B)}{\bold{P}(B)} = \frac{\text{number of elements} \in A \cap B}{\text{number of elements} \in B}$$
 
 where $\bold{P}(B) \gt 0$.
+
+In other words, the conditional probability is the ratio of $A$ and $B$ occurring to the probability of $B$ occurring. $B$ has already occurred, and so the only probability left of occurring is intersect between $A$ and $B$.
 
 ## Multiplication Rule
 
 Assuming all of the conditioning events have positive probability,
 
-$$\bold{P}(\bigcap^n_{i=1} A_i = \bold{P}(A_1) \bold{P}(A_2|A_1)\bold{P}(A_3|A_1 \cap A_2) ... \bold{P}(A_n | \bigcap^{n-1}_{i=1}) A_i$$
+$$\bold{P}(\bigcap^n_{i=1} A_i = \bold{P}(A_1) \bold{P}(A_2|A_1)\bold{P}(A_3|A_1 \cap A_2) ... \bold{P}(A_n | \bigcap^{n-1}_{i=1}) A_i)$$
 
+This rule is often seen when multiplying independent events together in a tree diagram.
 
 ## Total Probability Theorem
 
@@ -87,6 +90,38 @@ Let $A_1 ... A_n$ be disjoint events that form a partition of the sample space a
 $$\bold{P}(B) = \bold{P}(A_1 \cap B) + ... + \bold{P}(A_n \cap B) \\
 = \bold{P}(A_1)\bold{P}(B|A_1) + ... + \bold{P}(A_n)\bold{P}(B|A_n)$$
 
+This theorem is often seen when adding together various event outcomes to calculate the probability of an event occurring.
+
 ## Bayes' Rule
 
-$$\bold{P}(A_i | B) = \frac{\bold{P}(A_i)\bold{P}(B | A_i)}{\bold{P}(B)}$$
+Bayes' rule is used when finding the reversed conditional probability. 
+
+$$\bold{P}(A_i | B) = \frac{\bold{P}(A_i)\bold{P}(B | A_i)}{\bold{P}(B)} = \frac{\bold{P}(A_i) \bold{P}(B|A_i)}{\bold{P}(A_1) \bold{P}(B|A_1) + ... + \bold{P}(A_n) \bold{P}(B|A_n)}$$
+
+# Independence
+
+$A$ is independent of $B$ if 
+
+$$\bold{P}(A|B) = \bold{P}(A) = \frac{\bold{P}(A \cup B)}{\bold{P}(B)}$$
+
+Also, if $\bold{P}(B) > 0$
+
+$$\bold{P}(A|B) = \bold{P}(A)$$
+
+# Counting
+
+### Permutations
+
+Given $n$ objects,
+
+$$n!$$
+
+### $k$-permutations
+
+$$\frac{n!}{(n-k)!}$$
+
+### Combinations
+
+$${ n \choose k } = \frac{n!}{k!(n-k)!}$$
+
+### Partitions
