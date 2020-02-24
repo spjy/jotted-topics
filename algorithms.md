@@ -59,3 +59,31 @@ def insertion_sort(arr):
 ## Merge Sort
 
 
+# Data Structures
+
+## B-Trees
+
+- Self-balancing trees.
+- Have many children.
+- Every $n$ node has height $O(lg n)$
+- If an internal node $x$ has $n$ keys, $x$ has $n+1$ children.
+
+For each node $x$,
+- $n$ is the number of keys stored in node $x$.
+- Each key is stored in non-decreasing order
+- $l$ is a boolean indicating if $x$ is a leaf or not.
+
+For each internal node $x$,
+- Contains $n+1$ pointers to its children.
+
+Leaf nodes have no children.
+
+All leaves have the same depth, height $h$.
+
+Every node other than the root must have $t-1$ keys,
+
+Internal nodes must have at least $t$ children
+
+Nodes contain at most $2t-1$ keys.
+
+Internal nodes have at most $2t$ children.
