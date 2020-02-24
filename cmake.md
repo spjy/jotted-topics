@@ -1,3 +1,8 @@
+---
+header: CMake
+description: Making C building great again.
+---
+
 # CMake
 
 CMake is a build system to compile C/C++ scripts. You should have an understanding of Makefiles before using CMake; see the [Makefiles]() section.
