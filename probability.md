@@ -175,3 +175,73 @@ First, we choose $n_1$ objects to insert into the first group from the pool of $
 Next, from the remaining pool of $n - n_1$, we choose however many objects we want to insert into group $n_2$.
 
 We repeat this until the group $r$.
+
+# Random Variables
+
+A random variable $X$ is a function that assigns a real number $X(w)$ to each outcome $w \in \Omega$.
+
+## Probability Mass Function (PMF)
+
+If $S_X$ is a discrete set, $X$ is a discrete random variable.
+
+We can assign a probability to each element $x \in S_X$, and this assignment is called the probability mass function (PMF). In essence, we are assigning some weight to how probable an element $x$ occurs.
+
+Given a PMF $\bold{P}(X = x)$, it has the properties:
+- $\bold{P}(X = x) \geq 0$
+- $\displaystyle \sum_x \bold{P}(X = x) = 1$
+
+### Geometric Probability Mass Function / Distribution
+
+The geometric probability mass function describes the situation in which $k$ independent trials are required before the event occurs with probability $p$.
+
+$$P(K = k) = (1-p)^{k-1}p$$
+$$\sum_{k=1}^\infty \bold{P}(K=k) = \sum_{k=1}^\infty (1-p)^{k-1} p$$
+
+## Cumulative Distribution Function (CDF)
+
+The cumulative distribution function describes the situation in which the random value $X$ will take a value less than or equal to $x$.
+
+$$F_X(x) = \bold{P}(X \leq x)$$
+
+## Probability Generating Function (PGF)
+
+The probability generating function is a sequence encompasses both the probabilities and possible values associated with a random variable.
+
+$$G_X(z) = \bold{E}[z^x] = \sum_{k=0}^\infty z^k \bold{P} (X=k) = z^0 \bold{P}(K = 0) + z^1 \bold{P}(K = 1) + z^2 \bold{P}(K = 2) + \dots$$
+
+- Each exponent $k$ of $z^k$ denote the possible values a random variable can take on. 
+- The coefficient of $z^k$ denotes the probability attached to the possible value.
+
+If we take the first derivative:
+
+$$\frac{\text{d}G_X}{\text{d}z} = \sum_{k=0}^\infty k z^{k-1} \bold{P} (X=k)$$
+
+And second derivative:
+
+$$\frac{\text{d}^2G_X}{\text{d}z^2} = \sum_{k=0}^\infty k(k-1) z^{k-2} \bold{P} (X=k)$$
+
+### Expectation Value
+
+The expectation value is the average of the probability mass function. In other words, it is the value we expect the most, as this is where the distribution of weights is located in the probability mass function.
+
+It is the first derivative of the [PGF](#probability-generating-function-pgf) where $z=1$.
+
+$$\frac{\text{d}G_X}{\text{d}z}\Bigr|_{z=1} = \bold{E}[X] = \sum_{k \in S_x} k \bold{P} (X = k)$$
+
+### Second Moment
+
+The second moment is the sum of the first and second derivatives of the [PGF](#probability-generating-function-pgf) where $z=1$.
+
+$$\frac{\text{d}^2G_X}{\text{d}z^2}\Bigr|_{z=1} + \frac{\text{d}G_X}{\text{d}z}\Bigr|_{z=1} = \bold{E}[X^2]$$
+
+### Variance
+
+The variance tells us how far numbers are spread out from the average or expected value.
+
+$$\text{Var}[X] = \bold{E}[X^2] - \bold{E}[X]^2 = \frac{\text{d}^2G_X}{\text{d}z^2}\Bigr|_{z=1} + \frac{\text{d}G_X}{\text{d}z}\Bigr|_{z=1} - \Big(\frac{\text{d}G_X}{\text{d}z}\Bigr|_{z=1}\Big)^2$$
+
+### Standard Deviation
+
+The standard deviation describes the spread of values.
+
+$\text{stdiv} = \sqrt{\text{var}[X]}$
