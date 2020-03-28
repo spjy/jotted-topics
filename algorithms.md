@@ -88,6 +88,30 @@ Nodes contain at most $2t-1$ keys.
 
 Internal nodes have at most $2t$ children.
 
+## 2-3-4 Trees
+
+A 2-3-4 tree is a self-balancing tree.
+
+- A node has a max of three values. Values are sorted in ascending order.
+- All leaves are on the same level.
+- Internal nodes can have 2, 3 or 4 children.
+  - Given an internal node $i$-node for $2 \leq i \leq 4$, that node can have $i$ children and $i - 1$ values.
+- A leaf has the same properties as an internal $i$ node except its children are null.
+
+### Insertion
+
+Given a value $v$ that you wish to insert into the tree:
+
+1. Insert $v$ in a leaf node in the correct node.
+2. If the node becomes too full (e.g. it is a $4$-node) [split](#splitting).
+
+### Splitting $4$-node
+
+1. Move the middle value to its parent.
+   1. If the moved value is the root and it becomes too full, move the middle value up and that becomes the new root.
+2. Create two $2$-nodes by moving the left value to a $2$-node on the left of the $4$-node and the right element to another $2$-node on the right.
+3. If the $4$-node points 
+
 ## Red-Black Tree
 
 A red-black tree is a self-balancing binary search tree.
@@ -101,6 +125,7 @@ A red-black tree is a self-balancing binary search tree.
 - **Shortest path**: All black nodes
 - **Black Height**: Number of black nodes on a path from the current node to a leaf.
 b
+
 ### Insertion
 
 Suppose we insert a node $N$.
@@ -121,11 +146,11 @@ Suppose we insert a node $N$.
    3. Re-color $\text{N.parent}$ to black.
    4. Re-color $\text{N.grandparent}$ to red.
 
-## Deletion
+### Deletion
 
 Suppose we want to delete a node $N$ and we replace it with the node $R$.
 
-### Step 1
+#### Step 1
 
 1. $N$ has 2 `NIL` children (a leaf)
    1. $R$ is `NIL`.
@@ -134,7 +159,7 @@ Suppose we want to delete a node $N$ and we replace it with the node $R$.
 3. $N$ has 2 non-`NIL` children
    1. $R$ is the right child before the replacement is spliced out.
 
-### Step 2
+#### Step 2
 
 1. $N$ is red and $R$ is red or `NIL`
    1. Done.
@@ -146,7 +171,7 @@ Suppose we want to delete a node $N$ and we replace it with the node $R$.
 4. $N$ is black and its replacement is `NIL` or black.
    1. Proceed to step 3.
 
-### Step 3: Cases
+#### Step 3: Cases
 
 1. $R$ is red.
    1. Re-color $X$ black.
@@ -191,3 +216,15 @@ Suppose we want to delete a node $N$ and we replace it with the node $R$.
    6. If $R$ is the right child,
       1. Rotate $R.parent$ right.
    7. Done.
+
+## Pre-order Tree Traversal
+
+1. Visit node
+2. Traverse left subtree
+3. Traverse right subtree
+
+## In-order Tree Traversal
+
+1. Traverse Left
+2. Visit Node
+3. Traverse right

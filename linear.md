@@ -170,10 +170,6 @@ We can represent a certain vector in terms of a linear combination of vectors by
 
 If you fix one vector and vary another by a scalar, the resulting vector draws out a straight line.
 
-### Basis
-
-The basis of a vector space is a set of linearly independent vectors that span the full space.
-
 ### Spanning Sets
 
 The set of all possible linear combinations of $n$ vectors is the **spanning set** of the given $n$ vectors.
@@ -182,7 +178,7 @@ In other words, it is the set of all possible vectors you get by scaling each ve
 
 $$S = \{ \sum_{i=1}^n a_i\bold{v}_i | a_i \in \mathbb{R}, 1 \leq i \leq p \}$$
 
-### Linearly Dependent
+### Linear Dependence
 
 Given a set of vectors $S = \{v_1, v_2, v_3, \ldots, v_n\}$, we say the set of vectors is **linearly dependent** if there are $a_1, a_2, a_3, \ldots, a_n$, $a_i$ not all equal to zero such that
 
@@ -190,15 +186,17 @@ $$a_1 \bold{x}_1 + a_2 \bold{x}_2 + a_3 \bold{x}_3 + ... + a_n \bold{x}_n = 0$$
 
 In other words, there exists a solution that is non-trivial.
 
-A linearly dependent pair of vectors means that a vector does not contribute another dimension to the span. For example, if two vectors are added together and they both have the same span, they are linearly dependent; one vector can be expressed as a linear combination of the others.
-
-### Linearly Independent
+### Linear Independence
 
 On the other hand, the set of vectors $S = \{v_1, v_2, v_3, \ldots, v_n\}$ is **linearly independent** if all $a_i = 0$, the trivial solution, is the only solution.
 
 $$a_1 \bold{x}_1 + a_2 \bold{x}_2 + a_3 \bold{x}_3 + ... + a_n \bold{x}_n = 0$$
 
-If we add a vector to the set that is linearly independent from the other vectors, then we can add another dimension to the span.
+In other words, the only solution that exists is the trivial solution.
+
+### Basis
+
+The basis of a vector space is a set of [linearly independent](#linear-independence) vectors that span the full space.
 
 ## Linear Transformation
 
