@@ -7,7 +7,7 @@ description: The data playground.
 
 ## Loop Invariants
 
-The loop invariant has three properties.
+The loop invariant is a property that is true before and after each iteration of the loop. We must prove that the initialization (base case), maintenance (induction step) and termination are all true.
 
 ### Initialization
 
@@ -15,11 +15,19 @@ The property where the loop invariant is true before the first iteration. Typica
 
 ### Maintenance
 
-The property where if the invariant is true before an iteration of the loop, it remains true before the next iteration.
+The property where if the invariant is true before an iteration of the loop, it remains true before the iteration as well as after.
 
 ### Termination
 
-The condition which stops the loop.
+When we halt iteration, our result should be useful to us.
+
+## Asymptotic Notation
+
+Often, for algorithms, we want to analyze and quantify their space and time efficiency for large inputs.
+
+### $\Theta$ Notation
+
+Big Theta notation describes the 
 
 # Sorting Algorithms
 
@@ -29,7 +37,6 @@ Sorting algorithms consist of manipulating numbers and sorting them.
 
 It sorts an array $A[1, ..., n]$ of $n$ numbers or keys from smallest to greatest values.
 
-Pros:
 - Efficient for small amount of elements
 - Sorts in place
 
@@ -58,6 +65,15 @@ def insertion_sort(arr):
 
 ## Merge Sort
 
+## Heapsort
+
+- Sort in place
+
+### Complexities
+
+| Time | Space |
+|-|-|
+| $O(n \log n)$ | $O(1)$ |
 
 # Data Structures
 

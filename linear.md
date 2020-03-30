@@ -97,7 +97,7 @@ The system intersects at exactly one point.
 
 ### Infinite Solutions
 
-The system intersects d at every point.
+The system intersects at every point.
 
 ### No Solutions
 
@@ -106,6 +106,12 @@ The system does not intersect at any point.
 ## Consistent Solutions
 
 A system of linear equations is consistent if it has at least one solution. Otherwise, it is inconsistent.
+
+### Independent and Dependent Variables
+
+In a consistent system of linear equations, a variable that is not dependent on another variable is called independent or free.
+
+Otherwise, it is called a dependent variable.
 
 ## Augmented Matrix
 
@@ -136,7 +142,11 @@ a_{m1} & a_{m2} & \dots & a_{mn} & b_n \\
 
 ### Pivot Column
 
-A column containing a leading $1$.
+A pivot column in context of the reduced row echelon form of a matrix is a column containing a leading $1$ (in the leftmost non-zero entry).
+
+### Zero Row
+
+A zero row is a row containing all zeros.
 
 # Scalars
 
@@ -196,13 +206,27 @@ In other words, the only solution that exists is the trivial solution.
 
 ### Basis
 
-The basis of a vector space is a set of [linearly independent](#linear-independence) vectors that span the full space.
+The basis of a vector space $V$ with a set of vectors $S = \{ \bold{v_1}, \dots, \bold{v_n} \}$ that are:
+- [Linearly independent](#linear-independence)
+- In the spanning set of $V$.
+
+### Column Space
+
+If we have an $m \times n$ matrix $A$ with column vectors $\bold{A}_1$, $\bold{A}_2$, $\dots$, $\bold{A}_n$, then the column space of a matrix $A$ is the set containing the linear combinations of the column vectors of the matrix.
+
+It is denoted as:
+
+$$\mathcal{CS}(\bold A) = \{ \bold{A}_1, \bold{A}_2, \dots \bold{A}_n \}$$
 
 ## Linear Transformation
 
 A **linear transformation** is the act of inputting one vector and manipulating it such that you output a new vector.
 
 For instance if you rotate a vector a certain number of degrees.
+
+## Vector Space
+
+A vector space defines the properties of operations of vectors.
 
 # Matrices
 
@@ -323,6 +347,10 @@ $$-\bold{A} =
 \end{array}
 \right]
 $$
+
+## Nonsingular Matrices
+
+
 
 ## Tensors
 
