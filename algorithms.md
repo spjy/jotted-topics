@@ -29,6 +29,14 @@ Often, for algorithms, we want to analyze and quantify their space and time effi
 
 Big Theta notation describes the 
 
+### $O$ Notation
+
+Big O notation describes the upper bound of a function. In other words, it tells us 
+
+### $\Omega$ Notation
+
+Big Omega notation describes the 
+
 # Sorting Algorithms
 
 Sorting algorithms consist of manipulating numbers and sorting them.
