@@ -43,8 +43,6 @@ Sorting algorithms consist of manipulating numbers and sorting them.
 
 ## Insertion Sort
 
-It sorts an array $A[1, ..., n]$ of $n$ numbers or keys from smallest to greatest values.
-
 - Efficient for small amount of elements
 - Sorts in place
 
@@ -53,6 +51,12 @@ It sorts an array $A[1, ..., n]$ of $n$ numbers or keys from smallest to greates
 | Time | Space |
 |-|-|
 | $O(n^2)$ | $O(1)$ |
+
+### Algorithm
+
+1. Loop through each index
+2. At the $i$-th index, loop backwards and keep swapping until the element is in the proper place.
+3. Continue until array is completely sorted.
 
 ### Pseudocode
 
@@ -82,6 +86,33 @@ def insertion_sort(arr):
 | Time | Space |
 |-|-|
 | $O(n \log n)$ | $O(1)$ |
+
+## Counting Sort
+
+Counting sort works by counting the number of occurrences of a certain element and generates a new array by using the occurrence array.
+
+It is quick with linear time complexity, but since it depends on the largest element, $max$, in the array, it could take up a lot of memory. It 
+
+### Complexities
+| Time | Space |
+|-|-|
+| $O(n)$ | $O(\text{max})$ |
+
+### Algorithm
+
+1. Get maximum number $max$ in array `A[0, ... n]`
+2. Initialize zero array `occurrences` with $max + 1$ elements to store number of occurrences of each number.
+3. Loop through the `occurrences` starting at index $1$ and in the $i$-th index, store the sum of the $i$-th and $i - 1$-th indices
+4. Loop through the `occurrences` array and get the value at `A[n - 1]`.
+5. Initialize array `output` of size $A[n - 1]$, iterate backwards through `occurrences` array and for the $output[occurrence[A[j]]]$-th element, store `A[j]` here.
+
+## Radix Sort
+
+Radix sort is useful for sorting a numerical place value, for example, in the decimal counting system, we could sort by the ones, tens or hundreds place.
+
+## Bucket Sort
+
+Bucket sort 
 
 # Data Structures
 
