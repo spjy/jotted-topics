@@ -91,7 +91,7 @@ def insertion_sort(arr):
 
 Counting sort works by counting the number of occurrences of a certain element and generates a new array by using the occurrence array.
 
-It is quick with linear time complexity, but since it depends on the largest element, $max$, in the array, it could take up a lot of memory. It 
+It assumes a small range of integer values.
 
 ### Complexities
 | Time | Space |
@@ -112,7 +112,14 @@ Radix sort is useful for sorting a numerical place value, for example, in the de
 
 ## Bucket Sort
 
-Bucket sort 
+Bucket sort works by creating "buckets" and distributing elements within them. In each bucket, a sorting algorithm is executed and subsequently each bucket is concatenated together in the resulting array.
+
+It assumes uniform distribution such that each bucket has few values in them.
+
+### Complexities
+| Time (avg) x| Space |
+|-|-|
+| $O(n)$ | $O(\text{max})$ |
 
 # Data Structures
 
