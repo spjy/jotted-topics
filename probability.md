@@ -456,3 +456,5 @@ $$M_X(s) = \frac{e^{as}}{b - a + 1} \cdot \frac{e^{(b - a + 1)s} - 1}{e^s - 1} \
 | Uniform $a \leq x \leq b$ | Exponential $x \geq 0$ | Normal $-\infty < x < \infty$ |
 |-|-|-|
 | $\displaystyle \frac{1}{b - a} \cdot \frac{e^{sb} - e^{sa}}{s} \text{}$ | $\displaystyle \frac{\lambda}{\lambda - s} \quad s < \lambda$ | $\displaystyle e^{(\sigma^2 s^2 / 2) + \mu s} \text{}$ |
+
+
