@@ -331,7 +331,7 @@ A deterministic algorithm is the opposite of a [non-deterministic algorithm](#no
 
 Given two algorithms $A$ and $B$, $A$ reduces to $B$ if we take an instance (input) of $A$ and can transform the instance $B$ in polynomial time and use the answer of the instanced algorithms $B$ for $A$.
 
-Thus, we can deduce that if we can solve $A$ in a certain time complexity, $B$ is solved as well in the same complexity and vice versa.
+Thus, we can deduce that $B$ is as hard as $A$.
 
 ## Algorithm Classes
 
@@ -359,7 +359,7 @@ This is because all algorithms start out to be $NP$, but when we discover their 
 
 An algorithm is NP-hard if we could solve it fast, all problems in $NP$-fast can be solved.
 
-Given an algorithm $A$ and $B$, we can [reduce](#reduction) $A$ to $B$ and prove that $A$ is as hard as $B$.
+Given an algorithm $A$ and $B$, we can [reduce](#reduction) $A$ to $B$ and prove that $B$ is as hard as $A$.
 
 ### NP-complete (NPC)
 
