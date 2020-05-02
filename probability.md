@@ -301,7 +301,7 @@ $$\bold P(Y = y) = \sum_x \bold P({X = x, Y = y}) $$
 
 ### On an event
 
-# Continuous Random Variables
+# General Random Variables
 
 A continuous random variable infinitely many values, as opposed to discrete random variables where only countable values are considered.
 
@@ -388,6 +388,16 @@ A useful property is that $\phi(-x) = 1 - \phi(x) \quad \forall x$.
 
 $$\bold P (Y \leq y) = \bold P (\frac{Y - \mu}{\sigma} \leq \frac{y - \mu}{\sigma}) = \bold (X \leq \frac{y - \mu}{\sigma}) = \phi (\frac{y - \mu}{\sigma}) $$
 
+#### $\phi$ Function
+
+The $\Phi$ function is defined as:
+
+$$\Phi(\alpha) = \int_{-\infty}^\alpha \frac{1}{\sqrt{2 \pi}} e^{x^2/2} dx$$
+
+### Erlang Distribution
+
+### 
+
 # Derived Distributions
 
 A derived distribution is useful for finding a PMF or PDF of a function of one or more random variables.
@@ -409,6 +419,8 @@ $$F_Y(y) = \bold P (Y \leq y)$$
 Then differentiate the CDF:
 
 $$f_Y(y) = \frac{dF_Y}{dy}(y)$$
+
+# Functions 
 
 # Transforms & Moment Generating Function
 
@@ -461,7 +473,7 @@ $$M_X(s) = 1 - p + pe^s \quad k = 0, 1$$
 
 $$M_X(s) = (1 - p + pe^2)^n \quad k = 0, 1, \dots, n$$
 
-### Gemoetric (p)
+### Geometric (p)
 
 $$M_X(s) = \frac{pe^s}{1 - (1 - pe^s)} \quad k = 1, 2, \dots$$
 
@@ -479,7 +491,19 @@ $$M_X(s) = \frac{e^{as}}{b - a + 1} \cdot \frac{e^{(b - a + 1)s} - 1}{e^s - 1} \
 |-|-|-|
 | $\displaystyle \frac{1}{b - a} \cdot \frac{e^{sb} - e^{sa}}{s} \text{}$ | $\displaystyle \frac{\lambda}{\lambda - s} \quad s < \lambda$ | $\displaystyle e^{(\sigma^2 s^2 / 2) + \mu s} \text{}$ |
 
-# Markov Inequality
+# Limit Theorems
+
+Limit theorems answer questions to asymptotic behaviors to sequences of independently identically distributed random variables $S_n = X_1, X_2, \dots, X_n$ as $n \rightarrow \infty$.
+
+## Sample Mean
+
+The sample mean of 
+
+## Central Limit Theorem
+
+For $X_1, X_2, \dots$ independently and identically distributed random variables with common mean $\bold E[X]$ and variance $\sigma^2$
+
+## Markov Inequality
 
 For a non-negative random variable $X$ and constant $a>0$,
 
@@ -487,10 +511,18 @@ $$\bold P (X \geq a) \leq \frac{\bold E [X]}{a}$$
 
 In other words, the Markov inequality gives the confidence of the probability distribution for the upper bound of values $x \geq a$.
 
-# Chebyshev Inequality
+## Chebyshev Inequality
 
 For any random variable $X$,
 
 $$\bold P (|X - \bold E[X]| \geq a) \leq \frac{\sigma_x^2}{a^2}$$
 
 In other words, the Chebyshev inequality provides the confidence of the probability distribution for the range $\bold E[X] \pm a$.
+
+## The Weak Law of Large Numbers
+
+For a finite mean $\bold E[X]$ and $\epsilon > 0$,
+
+$$\lim_{n \rightarrow \infty} \bold P [|M_n - \mu| < \epsilon] = 1$$
+
+In other words, it tells us that if we had infinitely many data points, the sample mean converges in probability towards the expected value.
