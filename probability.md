@@ -90,6 +90,10 @@ Let $A_1 ... A_n$ be disjoint events that form a partition of the sample space a
 $$\bold{P}(B) = \bold{P}(A_1 \cap B) + ... + \bold{P}(A_n \cap B) \\
 = \bold{P}(A_1)\bold{P}(B|A_1) + ... + \bold{P}(A_n)\bold{P}(B|A_n)$$
 
+More compactly,
+
+$$\bold P(B) = \sum_{i = 1}^n P(A_i)P(B | A_i)$$
+
 This theorem is often seen when adding together various event outcomes to calculate the probability of an event occurring.
 
 ## Bayes' Rule
@@ -213,20 +217,6 @@ The Bernoulli distribution describes the situation in which the probability mass
 
 $$\bold P (X = x) = \begin{cases}p & x = 1\\1-p & x = 0\end{cases}$$
 
-### Poisson Distribution
-
-The Poisson distribution is a discrete distribution that is useful for counting the average number of occurrences $\lambda$ of an event over some time $t$.
-
-$$\bold P(X = x) = \frac{\lambda^k e^{-\lambda}}{k!} \quad k = 0, 1, 2, \dots$$
-
-#### Expected Value
-
-$$\bold E[X] = \lambda$$
-
-#### Variance
-
-$$\text{Var} (X) = \lambda$$
-
 ## Cumulative Distribution Function (CDF)
 
 The cumulative distribution function describes the situation in which the random value $X$ will take a value less than or equal to $x$.
@@ -297,11 +287,7 @@ The marginal PMF allows us to obtain individual random variable values from a ve
 $$\bold P(X = x) = \sum_y \bold P({X = x, Y = y}) $$
 $$\bold P(Y = y) = \sum_x \bold P({X = x, Y = y}) $$
 
-## Conditioning a Random Variable
-
-### On an event
-
-# General Random Variables
+# Continuous Random Variables
 
 A continuous random variable infinitely many values, as opposed to discrete random variables where only countable values are considered.
 
@@ -331,31 +317,43 @@ In a semi-closed interval $(a, b]$ for $a< b$,
 
 $$P(a < X \leq B) = F_X(b) - F_X(a)$$
 
-### Uniformly Distributed Random Variable
+## Conditioning a Random Variable
+
+### On an event
+
+# General Random Variables
+
+
+
+## Uniform Distribution
 
 A uniformly distributed random variable has a constant probability density function.
 
-#### Probability Density Function
+### Probability Density Function
 
 $$f_x(x) = \begin{cases} \frac{1}{b - a} & a \leq x \leq b \\ 0 & \text{otherwise} \end{cases}$$
 
-#### Cumulative Distribution Function
+### Cumulative Distribution Function
 
 $$F_X(x) = \int_{-\infty}^\infty f_X(x) \text dx = \begin{cases} 0 & x < a \\ \frac{x - a}{b - a} & a \leq x \leq b \\ 0 & \text{otherwise} \end{cases}$$
 
-### Exponentially Distributed Random Variable
+## Exponential Distribution
 
 An exponentially distributed random variable has an exponentially growing probability density function.
 
+It is often used to calculate the inter-arrival time.
+
+### Probability Density Function
+
 $$f_X (x) = \begin{cases} \lambda e^{-\lambda x} & x \geq 0 \\ 0 & \text{otherwise} \end{cases} = \lambda e^{-\lambda x} u(x)$$
 
-#### Cumulative Distribution Function
+### Cumulative Distribution Function
 
 $$F_X(x) = \int_0^x \lambda e^{-\lambda \beta} \text d\beta = 1-e^{-\lambda x}$$
 
-### Gaussian / Normal Random Variable
+## Gaussian / Normal Distribution
 
-A Gaussian or normally distributed random variable $X$ is only continuous.
+A Gaussian or normally distributed Distribution $X$ is only continuous.
 
 $$f_X (x) = \frac{1}{\sqrt{2\pi} \sigma} e^{-(x-\mu)^2 / 2\sigma^2}$$
 
@@ -364,39 +362,73 @@ It has scalar parameters:
 $$\sigma = \sqrt{\text{var}(X)} \quad \sigma > 0$$
 $$\mu = \bold E [X]$$ 
 
-#### Expected Value
+### Expected Value
 
 $$\bold E [X] = \mu$$
 
-#### Variance
+### Variance
 
 $$\text{var}(X) = \sigma^2$$
 
-### Standard Normal Random Variable
+## Standard Normal Distribution
 
-A normal random variable $X$ is standard normal if it has $\bold E [X] = \text{var}(X) = 0$. It is useful to find values for normal distributions. We define:
+A normal random variable $X$ is standard normal if it has $\bold E [X] = 0$ and $\text{var}(X) = 1$. It is useful to find values for normal distributions since solving for the regular normal random variable is difficult. We define:
 
-$$\phi(x) = \bold P (X \leq x) = P(X < x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^x e^{-t^2 / 2} dt$$
+$$\phi(y) = \bold P (Y \leq y) = P(Y < y) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^y e^{-t^2 / 2} dt$$
 
 Let $Y$ be another random variable (that is also normal because of linearity) with $\bold E [Y] = \mu$ and $\text{var}(Y) = \sigma^2$. Then:
 
-$$X = \frac{Y - \mu}{\sigma}$$
+$$Y = \frac{X - \mu}{\sigma}$$
 
 A useful property is that $\phi(-x) = 1 - \phi(x) \quad \forall x$.
 
-#### Calculation
+### Calculating the Normal Distribution
 
-$$\bold P (Y \leq y) = \bold P (\frac{Y - \mu}{\sigma} \leq \frac{y - \mu}{\sigma}) = \bold (X \leq \frac{y - \mu}{\sigma}) = \phi (\frac{y - \mu}{\sigma}) $$
+To properly use the standard normal table, we need to normalize the normal distribution to have a mean $\bold \mu = E[X] = 0$ and variance $\sigma^2 = 1$, also written as $X \sim N(\mu, \sigma^2) = N(0, 1)$.
 
-#### $\phi$ Function
+We calculate the standard normal variable $Y$, which is the normalized version of the normal random variable:
 
-The $\Phi$ function is defined as:
+$$\bold P (X \leq x) = \bold P \bigg(\frac{X - \mu}{\sigma} \leq \frac{x - \mu}{\sigma}\bigg) = \bold P \bigg(Y \leq \frac{x - \mu}{\sigma}\bigg) = \phi \bigg(\frac{x - \mu}{\sigma} \bigg) $$
 
-$$\Phi(\alpha) = \int_{-\infty}^\alpha \frac{1}{\sqrt{2 \pi}} e^{x^2/2} dx$$
+## Poisson Distribution
 
-### Erlang Distribution
+The Poisson distribution is a discrete distribution that is useful for calculating the likelihood of the average rate of occurrences $\lambda$ of an event over some time $t$. $k$ is the number of occurrences.
 
-### 
+$$\bold P(X = k) = \frac{\lambda t^k e^{-\lambda t}}{k!} \quad k = 0, 1, 2, \dots$$
+
+### Expected Value
+
+$$\bold E[X] = \lambda t$$
+
+### Variance
+
+$$\text{var}[X] = \lambda t$$
+
+### Transform
+
+$$X(z) = e^{\lambda t (z - 1)}$$
+
+## Erlang Distribution
+
+The Erlang distribution is a **continuous distribution** that is useful for calculating the probability the of wait time given the average rate of occurrences $\lambda$ and $n$ number of occurrences.
+
+In other words, the $n$-Erlang distribution is defined by a sum of exponential random variables $X = X_1 + X_2 + \dots + X_n$ where $X_i$ represents the $i$-th occurrence.
+
+Given $n \in \mathbb{R}^+$ with a rate $\lambda > 0$, the $n$-Erlang PDF is given by:
+
+$$f_X(x) = \frac{\lambda^n x^{n - 1} e^{-\lambda x}}{(n - 1)!} \quad x \geq 0$$
+
+### Expected Value
+
+$$\bold E[X] = \frac{n}{\lambda}$$
+
+### Variance
+
+$$\text{var}[X] = \frac{n}{\lambda^2}$$
+
+## Rayleigh Distribution
+
+
 
 # Derived Distributions
 
@@ -404,23 +436,59 @@ A derived distribution is useful for finding a PMF or PDF of a function of one o
 
 **Note**: When finding the expected value, we do not need to calculate derived distributions.
 
-## Discrete Case
+## Discrete
 
 Given a random variable $Y = g(X)$:
 
 $$p_Y = \bold P (g(X) = y) = \sum_{x: g(x) = y} p_X(x)$$
 
-## Continuous Case
+## Continuous
+
+Given a function of one random variable $Y = g(X)$ and its PDF $f_X(x)$:
 
 First, get the CDF of $Y$:
 
-$$F_Y(y) = \bold P (Y \leq y)$$
+$$F_Y(y) = \bold P (g(X) \leq y) = \int_{x: g(x) \leq y} f_X(x) dx$$
 
 Then differentiate the CDF:
 
 $$f_Y(y) = \frac{dF_Y}{dy}(y)$$
 
-# Functions 
+## Solving Cases
+
+### Multi-variable Derived Distribution
+
+Given a function of random variable $W = g(X, Y)$ and its PDF $f_W(w)$:
+
+First, get the CDF of $W$:
+
+$$F_W(w) = \bold P (g(X,y) \leq w) = \iint_{(x, y) \mid g(x,y) \leq w} f_W(w) dydx$$
+
+Then differentiate the CDF:
+
+$$f_W(w) = \frac{dF_W}{dw}(w)$$
+
+### Multi-variable Derived Distribution with Joint PDF
+
+Given $V = g_1(X, Y)$ and $W = g_2(X, Y)$ with joint PDF $f_{X,Y}(x,y)$ and
+
+- $v = g_1(x,y), w = g_2(x,y)$ can be uniquely solved for $x,y$ in terms of $v,w$; for example $x=h_1(v,w), y=h_2(v,w)$
+- The derivatives of $x,y$ with respect to $v,w$ are continuous and exist.
+
+Then, solve for $x=h_1(v,w), y=h_2(v,w)$ and use the equation:
+
+$$f_{V,W}(v,w) = f_{X,Y}[h_1(v,w), h_2(v,w)] |J(v,w)|$$ 
+
+Where $J(v,w)$ is the Jacobian:
+
+$$J(v,w) = \begin{vmatrix}
+\displaystyle \frac{\partial x}{\partial v} & \displaystyle \frac{\partial x}{\partial w} \\[10pt]
+\displaystyle \frac{\partial y}{\partial v} & \displaystyle \frac{\partial y}{\partial w}
+\end{vmatrix}$$
+
+### Sum of Independent Random Variables (Convolution)
+
+
 
 # Transforms & Moment Generating Function
 
