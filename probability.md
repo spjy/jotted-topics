@@ -196,32 +196,13 @@ Given a PMF, it has the properties:
 - $\bold{P}(X = x) \geq 0$
 - $\displaystyle \sum_x \bold{P}(X = x) = 1$
 
-### Geometric Distribution
-
-The geometric probability mass function describes the situation in which $n$ independent trials are required before the event occurs with probability $p$.
-
-$$P(X = n) = (1-p)^{n-1}p$$
-$$\sum_{k=1}^\infty \bold{P}(X = k) = \sum_{k=1}^\infty (1-p)^{k-1} p$$
-
-In other words, $k-1$ trials occur before the event occurs.
-
-### Binomial Distribution
-
-The binomial probability mass function describes the situation in which the $n$ independent trials occur with $k$ successes with probability $p$ and $n - k$ fails with probability $1-p$.
-
-$$\bold P(X = k) = {n \choose k} p^k (1-p)^k$$
-
-### Bernoulli Distribution
-
-The Bernoulli distribution describes the situation in which the probability mass function consists of a binary set of outcomes, $S_X = \{ 0, 1 \}$. It is a special case of the binomial distribution, where $n = 1$.
-
-$$\bold P (X = x) = \begin{cases}p & x = 1\\1-p & x = 0\end{cases}$$
-
 ## Cumulative Distribution Function (CDF)
 
 The cumulative distribution function describes the situation in which the random value $X$ will take a value less than or equal to $x$.
 
 $$F_X(x) = \bold{P}(X \leq x) = \sum_{k = - \infty}^x P(X = k)$$
+
+In other words, it's the cumulative probability that of a distribution up to a value $x$.
 
 ## Probability Generating Function (PGF)
 
@@ -264,7 +245,74 @@ $$\text{Var}[X] = \bold{E}[X^2] - \bold{E}[X]^2 = \frac{\text{d}^2G_X}{\text{d}z
 
 The standard deviation describes the spread of values.
 
-$\text{stdiv} = \sqrt{\text{var}[X]}$
+$\text{stdiv} = \sigma = \sqrt{\text{var}[X]}$
+
+## Geometric Distribution
+
+The geometric probability mass function describes the situation in which $n$ independent trials are required before the event occurs with probability $p$.
+
+### Probability Mass Function
+
+$$P(X = n) = (1-p)^{n-1}p$$
+$$\sum_{k=1}^\infty \bold{P}(X = k) = \sum_{k=1}^\infty (1-p)^{k-1} p$$
+
+In other words, $k-1$ trials occur before the event occurs.
+
+### Cumulative Density Function
+
+$$\bold P (X \leq x) = 1-(1-p)^{n-1}$$
+
+### Expected Value
+
+$$\bold E[X] = \frac{1}{p}$$
+
+### Variance
+
+$$\text{var}[X] = \frac{1-p}{p^2}$$
+
+## Bernoulli Distribution
+
+The Bernoulli distribution describes the situation in which the probability mass function consists of a binary set of outcomes, $S_X = \{ 0, 1 \}$. It is a special case of the binomial distribution, where $n = 1$.
+
+### Probability Mass Function
+
+$$\bold P (X = x) = \begin{cases}p & x = 1\\1-p & x = 0\end{cases}$$
+
+### Cumulative Density Function
+
+$$\bold P (X \leq x) = \begin{cases}
+0 & k < 0 \\
+1 - p & 0 \leq k < 1 \\
+p & k \geq 1
+\end{cases}$$
+
+### Expected Value
+
+$$\bold E[X] = p$$
+
+### Variance
+
+$$\text{var}[X] = p(1-p)$$
+
+## Binomial Distribution
+
+The binomial probability mass function describes the situation in which the $n$ independent trials occur with $k$ successes with probability $p$ and $n - k$ fails with probability $1-p$.
+
+### Probability Mass Function
+
+$$\bold P(X = k) = {n \choose k} p^k (1-p)^k$$
+
+### Cumulative Density Function
+
+$$\bold P(X \leq x) = \sum_{i = 1}^x {n \choose i} p^i (1-p)^{n-i}$$
+
+### Expected Value
+
+$$\bold E[X] = np$$
+
+### Variance
+
+$$\text{var}[X] = np(1-p)$$
 
 ## Functions of Random Variables
 
@@ -317,9 +365,11 @@ In a semi-closed interval $(a, b]$ for $a< b$,
 
 $$P(a < X \leq B) = F_X(b) - F_X(a)$$
 
-## Conditioning a Random Variable
+## Conditioning
 
 ### On an event
+
+$$\bold{P} (X \in B \mid X \in A) = \frac{\bold P (X \in B, X \in A)}{\bold P (X \in A)} = \frac{\displaystyle \int_{A \cap B} f_X(x) dx)}{\bold P (X \in A)} = \int_B f_{X \mid A} (x) dx $$
 
 # General Random Variables
 
@@ -339,7 +389,7 @@ $$F_X(x) = \int_{-\infty}^\infty f_X(x) \text dx = \begin{cases} 0 & x < a \\ \f
 
 ## Exponential Distribution
 
-An exponentially distributed random variable has an exponentially growing probability density function.
+An exponentially distributed random variable has an exponentially growing probability density function with a rate $\lambda$.
 
 It is often used to calculate the inter-arrival time.
 
@@ -350,6 +400,14 @@ $$f_X (x) = \begin{cases} \lambda e^{-\lambda x} & x \geq 0 \\ 0 & \text{otherwi
 ### Cumulative Distribution Function
 
 $$F_X(x) = \int_0^x \lambda e^{-\lambda \beta} \text d\beta = 1-e^{-\lambda x}$$
+
+### Expected Value
+
+$$\frac{1}{\lambda}$$
+
+### Variance
+
+$$\frac{1}{\lambda^2}$$
 
 ## Gaussian / Normal Distribution
 
@@ -428,7 +486,11 @@ $$\text{var}[X] = \frac{n}{\lambda^2}$$
 
 ## Rayleigh Distribution
 
+The Rayleigh distribution is a continuous distribution used to often measure component lifetime.
 
+$$f_X(x) = x e^{-x^2/2}$$
+
+This PDF originates from the magnitude of two independently, normally distributed, and non-negative random variables, $\sqrt{X^2 + Y^2}$.
 
 # Derived Distributions
 
@@ -565,11 +627,31 @@ Limit theorems answer questions to asymptotic behaviors to sequences of independ
 
 ## Sample Mean
 
-The sample mean of 
+The sample mean of a distribution is the average of picked values from the distribution.
+
+$$M_n = \frac{1}{n} \sum_{i = 1}^n X_i = \frac{S_n}{n}$$
+
+From it, we can derive that
+
+$$\bold E [M_n] = \mu$$
+
+$$\text{var}(M_n) = \frac{\sigma^2}{n}$$
 
 ## Central Limit Theorem
 
-For $X_1, X_2, \dots$ independently and identically distributed random variables with common mean $\bold E[X]$ and variance $\sigma^2$
+For $X_1, X_2, \dots$ independently and identically distributed random variables with common mean $\bold E[X]$ and variance $\sigma^2$.
+
+$$Z_n = \frac{X_1 + \dots + X_n - n\mu}{\sigma \sqrt{n}}$$
+
+We notice that as $n \rightarrow \infty$, $Z_n$ converges to the standard normal cumulative distribution function:
+
+$$\lim_{n \rightarrow \infty} \bold P(Z_n \leq z) = \Phi(z) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^z e^{-x^2 / 2} dx$$
+
+### De-Moivre - Laplace Approximation (1/2 approximation)
+
+For a binomial random variable  with $n \rightarrow \infty$ and $p$ with $k,l \in \mathbb{Z}^+$
+
+$$\bold P (k \leq S_n \leq l) = \Phi(\frac{l + \frac{1}{2} - np}{\sqrt{np(1-p)}}) - \Phi(\frac{k - \frac{1}{2} - np}{\sqrt{np(1-p)}}) $$
 
 ## Markov Inequality
 
