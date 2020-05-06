@@ -296,7 +296,7 @@ $$\text{var}[X] = p(1-p)$$
 
 ## Binomial Distribution
 
-The binomial probability mass function describes the situation in which the $n$ independent trials occur with $k$ successes with probability $p$ and $n - k$ fails with probability $1-p$.
+The binomial probability mass function describes the situation in which the $n$ independent trials occur with $k$ successes with probability $p$ and $n - k$ fails with probability $1-p$ with replacement.
 
 ### Probability Mass Function
 
@@ -313,6 +313,22 @@ $$\bold E[X] = np$$
 ### Variance
 
 $$\text{var}[X] = np(1-p)$$
+
+## Hypergeometric Distribution
+
+The hypergeometric distribution is a discrete distribution that characterizes the probability of observed $k$ successes in $n$ draws without replacement. $N$ is the population size and $K$ is the number of successes in the population.
+
+### Probability Mass Function
+
+$$\bold P (X = k) = \frac{\begin{pmatrix} K \\ k \end{pmatrix} \begin{pmatrix} N - K \\ n - k \end{pmatrix}}{\begin{pmatrix} N \\ n \end{pmatrix}}$$
+
+### Multivariate Hypergeometric Distribution
+
+$$\frac{\displaystyle \prod_{i = 1}^c \begin{pmatrix} K_i \\ k_i \end{pmatrix}}{\begin{pmatrix} N \\ n \end{pmatrix}}$$
+
+For $c$ different populations $K_i$, we select $k_i$ people.
+
+$N = \displaystyle \sum_{i=1}^c K_i$ is the total number of populations.
 
 ## Functions of Random Variables
 
@@ -386,6 +402,14 @@ $$f_x(x) = \begin{cases} \frac{1}{b - a} & a \leq x \leq b \\ 0 & \text{otherwis
 ### Cumulative Distribution Function
 
 $$F_X(x) = \int_{-\infty}^\infty f_X(x) \text dx = \begin{cases} 0 & x < a \\ \frac{x - a}{b - a} & a \leq x \leq b \\ 0 & \text{otherwise} \end{cases}$$
+
+### Expected Value
+
+$$\bold E[X] = \frac{1}{2} (a+b)$$
+
+### Variance
+
+$$\text{var}[X] = \frac{1}{12} (b-a)^2$$
 
 ## Exponential Distribution
 
@@ -550,7 +574,36 @@ $$J(v,w) = \begin{vmatrix}
 
 ### Sum of Independent Random Variables (Convolution)
 
+# Expectation
 
+The expected value predicts the value of a random variable. 
+
+$$\bold E [g(X,Y)] = \begin{cases}
+\displaystyle \int_{-\infty}^{\infty} \int_{-\infty}^{\infty} g(X,Y) f_{X,Y}(x,y) dxdy & \text{continuous} \\
+\displaystyle \sum_{-\infty}^{\infty} \sum_{-\infty}^{\infty} g(X,Y) p_{X,Y}(x,y)& \text{discrete}
+\end{cases}$$
+
+## Covariance
+
+The covariance tells us how two random variables $X$ and $Y$ vary.
+
+$$\text{cov}(X,Y) = \bold E[(X - \bold E[X])(Y - \bold E[Y])]$$
+
+$$\bold E [XY] - \bold E[X] \bold E[Y]$$
+
+## Correlation
+
+The correlation tells us how related two random variables $X$ and $Y$ are.
+
+$$\rho_{XY}(x,y) = \frac{\text{cov}(X,Y)}{\sigma_x \sigma_y} = \frac{\bold E [XY] - \bold E[X] \bold E[Y]}{\sigma_x \sigma_y}$$
+
+## Sum of Expectations
+
+Given a sum of random variables $W=X+Y$, we observe:
+
+$$\bold E[W] = \bold E[X+Y] = \bold E[X] + \bold E[Y]$$
+
+from the linearity of integration. Note that this property is true even if $X,Y$ are dependent.
 
 # Transforms & Moment Generating Function
 
