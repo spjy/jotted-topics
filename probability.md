@@ -247,6 +247,10 @@ The standard deviation describes the spread of values.
 
 $\text{stdiv} = \sigma = \sqrt{\text{var}[X]}$
 
+## Discrete Random Variable Conditioning
+
+$$\bold P(X = x \mid Y = y) = \frac{\bold P(X = x, Y = y)}{\bold P(Y = y)}$$
+
 ## Geometric Distribution
 
 The geometric probability mass function describes the situation in which $n$ independent trials are required before the event occurs with probability $p$.
@@ -583,9 +587,25 @@ $$\bold E [g(X,Y)] = \begin{cases}
 \displaystyle \sum_{-\infty}^{\infty} \sum_{-\infty}^{\infty} g(X,Y) p_{X,Y}(x,y)& \text{discrete}
 \end{cases}$$
 
+## Conditional Expectation
+
+Given a fixed value $Y = y$, we can find the expected value of $X$.
+
+$$\bold E[X | Y = y] = \begin{cases}
+\displaystyle \int_{-\infty}^\infty f_{X \mid Y}(x | y) dx  & \text{continuous} \\
+\displaystyle \sum_x x \bold P(X = x \mid Y = y) & \text{discrete}
+\end{cases}$$
+
+## Law of Iterated (Total) Expectation
+
+$$\bold E[X] = \bold E[\bold E[X | Y]] = \begin{cases}
+\displaystyle \int_{-\infty}^\infty \bold E[X|Y=y] f_Y(y) dy & \text{continuous} \\
+\displaystyle \sum_y \bold E [X|Y=y] \bold P[Y = y] & \text{discrete}
+\end{cases}$$
+
 ## Covariance
 
-The covariance tells us how two random variables $X$ and $Y$ vary.
+The covariance tells us how two random variables $X$ and $Y$ are related.
 
 $$\text{cov}(X,Y) = \bold E[(X - \bold E[X])(Y - \bold E[Y])]$$
 
@@ -593,7 +613,7 @@ $$\bold E [XY] - \bold E[X] \bold E[Y]$$
 
 ## Correlation
 
-The correlation tells us how related two random variables $X$ and $Y$ are.
+The correlation tells us how linearly related two random variables $X$ and $Y$ are.
 
 $$\rho_{XY}(x,y) = \frac{\text{cov}(X,Y)}{\sigma_x \sigma_y} = \frac{\bold E [XY] - \bold E[X] \bold E[Y]}{\sigma_x \sigma_y}$$
 
@@ -604,6 +624,13 @@ Given a sum of random variables $W=X+Y$, we observe:
 $$\bold E[W] = \bold E[X+Y] = \bold E[X] + \bold E[Y]$$
 
 from the linearity of integration. Note that this property is true even if $X,Y$ are dependent.
+
+## Mean Squared Error
+
+If we want to estimate the value of an unobserved random variable $X$, we can calculate the mean squared error.
+
+$$\text{MSE} = [M_n - \bold E[X]] = \text{var}[M_n] = \frac{1}{n^2} \sum_{i=1}^n X_i = \frac{1}{n^2} n \sigma_x^2 = \frac{\sigma_x^2}{n}$$
+
 
 # Transforms & Moment Generating Function
 
