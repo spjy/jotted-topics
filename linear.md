@@ -156,7 +156,7 @@ A scalar is a single number.
 
 A vector is an array numbers.
 
-### Notation
+## Notation
 
 $$ \bold{A} =
 \left[
@@ -168,7 +168,13 @@ x_n
 \end{array}
 \right]$$
 
-where $n$ is the number of rows in the vector.
+where $[v]$ $n$ is the number of rows in the vector.
+
+## Operations
+
+### Equality
+
+
 
 ## Linear Combinations
 
@@ -178,7 +184,11 @@ $$a_1 \bold{v}_1 + a_2 \bold{v}_2 + \dots + a_n \bold{v}_n$$
 
 We can represent a certain vector in terms of a linear combination of vectors by scaling the weights of each vector.
 
-If you fix one vector and vary another by a scalar, the resulting vector draws out a straight line.
+If we set the linear combination equal to a vector $\bold{b}$:
+
+$$a_1 \bold{v}_1 + a_2 \bold{v}_2 + \dots + a_n \bold{v}_n = \bold b$$
+ 
+we are trying to find a combination $a_1, a_2, \dots, a_n$ such that it results in the vector $\bold b$.
 
 ### Spanning Sets
 
