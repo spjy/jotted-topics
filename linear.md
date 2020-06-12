@@ -127,11 +127,13 @@ A vector space defines the properties of operations of vectors.
 
 # Matrices
 
+Intuitively, a matrix has the ability to transform a vector. Take, for example, $A \bold{x = b}$. We are calculating how to achieve the vector $\bold b$ by scaling $\bold x$ by $A$.
+
 A matrix is a rectangular array of numbers of the form:
 
 ### Notation
 
-$$ \bold{A}_{mn} =
+$$A_{mn} =
 \left[
 \begin{array}{ccccc}
 a_{11} & a_{12} & \dots & a_{1n} \\
@@ -145,7 +147,7 @@ where $A$ is an $m \times n$ matrix and $m$ are the rows and $n$ are the columns
 
 More generally,
 
-$$\bold{A} =
+$${A} =
 \left[
 \begin{array}{c}
 a_{ij} 
@@ -227,6 +229,8 @@ $$\bold{A} + \bold{B} = \bold{B} + \bold{A} \text{}$$
 
 $$\bold{A} + (\bold{B} + \bold{C}) = (\bold{A} + \bold{B}) + \bold{C} \text{}$$
 
+$$\bold{(AB)C = A(BC)}$$
+
 #### Scalar Distributivity
 
 $$c(d\bold{A}) = (cd)\bold{A}$$
@@ -245,29 +249,11 @@ $$-\bold{A} =
 \right]
 $$
 
-## Invertibility
+#### Exponents
 
-Given an $n \times n$ matrix $A$, $B$ is an inverse of $\bold A$ where:
-
-$$\bold{AB} = \bold{BA} = \bold I$$
-
-$\bold A^{-1}$ is denoted as the inverse of $\bold A$.
-
-## Rectangular Matrix
-
-Given an $m \times n$ matrix $A$, $A$ is a rectangular matrix if $m \neq n$.
-
-## Square Matrix
-
-Given an $m \times n$ matrix $A$, $A$ is a square matrix if $m=n$.
-
-## Nonsingular Matrix
-
-Given a square matrix $A$, suppose that the columns are linearly independent, or the solution set is only the trivial solution and there exists only one solution.
-
-$A$ is a nonsingular matrix.
-
-Otherwise, $A$ is a singular matrix, or in other words, there are infinite or no solutions and the columns are linearly dependent.
+$$\bold A^n = \bold{A_1 A_2} \dots \bold A_n$$
+$$\bold{A^n A^m = A^{n+m}}$$
+$$\bold{(A^n)^m=\bold A^{nm}}$$
 
 ## Identity Matrix
 
@@ -287,12 +273,121 @@ It has the special property that:
 
 $$\bold I \bold x = \bold x$$
 
+## Rectangular Matrix
+
+Given an $m \times n$ matrix $A$, $A$ is a rectangular matrix if $m \neq n$.
+
+## Square Matrix
+
+Given an $m \times n$ matrix $A$, $A$ is a square matrix if $m=n$.
+
+## Diagonal Matrix
+
+A diagonal matrix is one where there are non-zero elements in indices such that $i=j$ (the column index equals the row index), and all other elements are zero.
+
+$$
+D =
+\begin{bmatrix}
+  d_{1} & & \\
+  & \ddots & \\
+  & & d_{n}
+\end{bmatrix}
+$$
+
+## Nonsingular Matrix
+
+Given a square matrix $A$, suppose that the columns are linearly independent, or the solution set is only the trivial solution and there exists only one solution.
+
+$A$ is a nonsingular matrix.
+
+Otherwise, $A$ is a singular matrix, or in other words, there are infinite or no solutions and the columns are linearly dependent.
+
+## Inverting a Matrix
+
+Given an $n \times n$ matrix $A$, $B$ is an inverse of $\bold A$ where:
+
+$$\bold{AB} = \bold{BA} = \bold I \implies \bold{A A^{-1} = A^{-1} A = I}$$
+
+$\bold A^{-1}$ is denoted as the inverse of $\bold A$.
+
+Intuitively, we are undoing the transformation of a matrix. Take $A \bold{x = b} \implies \bold x = A^{-1} \bold b$.
+
+We are trying to retrieve the original vector $\bold x$ transformed by $A$ by undoing that transformation and taking the inverse $A^{-1}$.
+
+### Conditions for Invertibility
+
+Given a square matrix $\bold A$:
+
+- $\bold A$ must have $n$ non-zero pivots (linearly independent columns).
+- $\det \bold A \neq 0$
+- $\bold A\bold x = \bold 0$ where $x = 0$, the trivial solution, is the only solution.
+- Gauss-Jordan elimination eliminates $[ \bold A \bold I ]$ to $[ \bold I \bold A^{-1} ]$
+
+### Calculating inverse of diagonal matrix
+
+Given an invertible, square, and diagonal matrix with non-zero diagonal entries:
+
+$$D =
+\begin{bmatrix}
+  d_{1} & & \\
+  & \ddots & \\
+  & & d_{n}
+\end{bmatrix} \implies D^{-1}=
+\begin{bmatrix}
+  \frac{1}{d_{1}} & & \\
+  & \ddots & \\
+  & & \frac{1}{d_{n}}
+\end{bmatrix}$$
+
+### Calculating inverse of matrix product
+
+If $A$ and $B$ are invertible, then $AB$ is as well.
+
+$$(AB)^{-1} = B^{-1} A^{-1}$$
+
 ## Elementary Matrix
 
 An elementary matrix is one that applies one row operation on another matrix.
 - Row switch: $R_i \leftrightarrow R_j$
 - Row multiplication: $k R_i \rightarrow R_i \quad k \neq 0$
 - Row addition: $R_i + k R_j \quad i \neq j$
+
+## Multiplication
+
+$$\bold A_{mn} \bold B_{np} = \bold C_{mp}$$
+
+### Inner (Dot) Product
+
+Each entry $ij$ is calculated by calculating the dot product of the $i$th row and the $j$th column.
+
+where each entry $[\bold C]_{ij} = \displaystyle \sum_{i=1}^n a_{ik} b_{kj} \text{}$
+
+$$\bold a^T \bold b = \left[
+\begin{array}{c}
+a_1 & a_2 & \dots & a_n 
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+a_1 \\ a_2 \\ \vdots \\ a_n 
+\end{array}
+\right]$$
+
+### Outer Product
+
+The outer product is a much easier method to multiply matrices. Simply multiply the columns by the rows and add them together.
+
+$$\bold {ab}^T = \left[
+\begin{array}{c}
+a_1 \\ a_2 \\ \vdots \\ a_n 
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+a_1 & a_2 & \dots & a_n 
+\end{array}
+\right]
+$$
 
 # Linear Equations
 
@@ -450,7 +545,9 @@ a_{11} & a_{12} & \dots & a_{1n} & b_1 \\
 \vdots & \vdots & \ddots & \vdots & \vdots \\ 
 a_{m1} & a_{m2} & \dots & a_{mn} & b_n \\
 \end{array}
-\right]$$
+\right] = [ \bold{Ab}]$$
+
+We are appending the vector of constants onto the coefficient matrix.
 
 ## Reduced Row Echelon Form
 
@@ -459,10 +556,14 @@ a_{m1} & a_{m2} & \dots & a_{mn} & b_n \\
 3. Starting from the top left, the leading one (1) appears to the right of the leading one (1) of the preceding row.
 4. All other entries of a column containing a leading one (1) is zero (0).
 
+### Gauss-Jordan Elimination
+
+Gauss-Jordan Elimination can be used to solve systems of linear equations and find inverses of invertible matrices. The goal is to get the matrix in reduced row echelon form.
+
 ### Pivot Column
 
 A pivot column in context of the reduced row echelon form of a matrix is a column containing a leading $1$ (in the leftmost non-zero entry).
 
 ### Zero Row
 
-A zero row is a row containing all zeros.
+A zero row is a row containing all zeros. They are at the bottom.
