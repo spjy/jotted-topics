@@ -322,6 +322,13 @@ Given a square matrix $\bold A$:
 - $\det \bold A \neq 0$
 - $\bold A\bold x = \bold 0$ where $x = 0$, the trivial solution, is the only solution.
 - Gauss-Jordan elimination eliminates $[ \bold A \bold I ]$ to $[ \bold I \bold A^{-1} ]$
+- $\bold A$ is invertible if $|a_{ii}| > \sum_{j \neq i} |a_{ij}|$ (it is diagonally dominant)
+
+### Properties
+
+- $(A^{-1})^{-1} = A$
+- $(kA)^{-1} = k^{-1} A^{-1} \text{}$
+- $\det(A^{-1}) = (\det A)^{-1} \text{}$
 
 ### Calculating inverse of diagonal matrix
 
@@ -347,10 +354,61 @@ $$(AB)^{-1} = B^{-1} A^{-1}$$
 
 ## Elementary Matrix
 
-An elementary matrix is one that applies one row operation on another matrix.
-- Row switch: $R_i \leftrightarrow R_j$
-- Row multiplication: $k R_i \rightarrow R_i \quad k \neq 0$
-- Row addition: $R_i + k R_j \quad i \neq j$
+An elementary matrix is one that applies a row operation.
+
+### Row switch
+
+$R_i \leftrightarrow R_j$
+
+$$E_s = \begin{bmatrix}
+  1 &        &   &        &   &        &   \\
+    & \ddots &   &        &   &        &   \\
+    &        & 0 &        & 1 &        &   \\
+    &        &   & \ddots &   &        &   \\
+    &        & 1 &        & 0 &        &   \\
+    &        &   &        &   & \ddots &   \\
+    &        &   &        &   &        & 1
+\end{bmatrix}$$
+
+#### Inverse
+
+$$E_s^{-1} = E_s$$
+
+### Row multiplication: 
+
+$k R_i \rightarrow R_i \quad k \neq 0$
+
+$$E_m(k) = \begin{bmatrix}
+  1 &        &   &   &   &        &   \\
+    & \ddots &   &   &   &        &   \\
+    &        & 1 &   &   &        &   \\
+    &        &   & k &   &        &   \\
+    &        &   &   & 1 &        &   \\
+    &        &   &   &   & \ddots &   \\
+    &        &   &   &   &        & 1
+\end{bmatrix}$$
+
+#### Inverse
+
+$$E_m^{-1}\bigg(\frac{1}{k}\bigg) = E_m(k)$$
+
+### Row addition: 
+
+$R_i + k R_j \quad i \neq j$
+
+$$E_a(k) = \begin{bmatrix}
+  1 &        &   &        &   &        &   \\
+    & \ddots &   &        &   &        &   \\
+    &        & 1 &        &   &        &   \\
+    &        &   & \ddots &   &        &   \\
+    &        & k &        & 1 &        &   \\
+    &        &   &        &   & \ddots &   \\
+    &        &   &        &   &        & 1
+\end{bmatrix}$$
+
+#### Inverse
+
+$$E_a^{-1}(-k) = E_a(k)$$
 
 ## Multiplication
 
