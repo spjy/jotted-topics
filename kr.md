@@ -69,6 +69,25 @@ In Korean, the sentence structure follows the subject-object-verb (S-O-V) paradi
 
 저기요 - Excuse me.
 
+# Marking Particles
+
+## 은/는 - Topic
+
+The subject marking particle is used to denote a change in topic or a juxtaposition with another object.
+
+## 이/가 - Subject
+
+The topic marking particle is used to denote that the object that is being described. This is used in conjunction with an adjective.
+
+**Example**: 사과를 빨갛. [The apple is red.]
+
+## 을/를 - Object
+
+The object marking particle is used to denote the object that is being acted on. This is usually used in conjunction with transitive verbs, or verbs that require an object to exist (e.g. love / 사랑하다).
+
+**Example**: 사과를 사랑해. [I love apples.]
+
+
 # Verb Conjugation
 
 Depending on the formality if the situation, you replace the infinitive verb (V) form by dropping 다 in V다 with the corresponding formality level.
@@ -107,7 +126,7 @@ If the verb stem's last vowel ends with ㅏ/ㅗ, conjugate with 아요.
 | - | - | - |
 
 #### 받침 & Verb Stem's Last Vowel is Not ㅏ/ㅗ
-For all other cases, use 아요.
+For all other cases, use 어요.
 
 | ㅛ/ㅕ/ㅑ/ㅐ/ㅔ/ㅓ/ㅣ/ㅠ/ㅜ/ㅡ | &#8594; | V어[요] |
 | - | - | - |
@@ -168,7 +187,7 @@ If the verb stem's last vowel ends with ㅏ/ㅗ, conjugate with 아요.
 | - | - | - |
 
 #### 받침 & Verb Stem's Last Vowel is Not ㅏ/ㅗ
-For all other cases, use 아요.
+For all other cases, use 어요.
 
 | ㅛ/ㅕ/ㅑ/ㅐ/ㅔ/ㅓ/ㅣ/ㅠ/ㅜ/ㅡ | &#8594; | V었어[요] |
 | - | - | - |
@@ -197,4 +216,28 @@ If the verb stem ends with a consonant, use V습니다.
 If the verb stem ends with a verb, attach ㅂ to the verb stem ending block: Vㅂ니다.
 
 | V | &#8594; | Vㅂ니다 |
+| - | - | - |
+
+## Future Tense
+
+Future tense expresses an action that will occur.
+
+| Formality | Conjugation |
+| --------- | ----------- |
+| Casual | V + ㄹ/을 거야 |
+| Polite Low | V + ㄹ/을 거에요
+| Polite High | V + ㄹ/을 갑니다
+
+#### 받침
+
+If the verb stem ends with a consonant, use V을 + formality.
+
+| V | &#8594; | V았습니다 을
+| - | - | - |
+
+#### No 받침
+
+If the verb stem ends with a verb, attach ㄹ to the verb stem ending block: Vㄹ + formality.
+
+| V | &#8594; | Vㄹ + formality |
 | - | - | - |
