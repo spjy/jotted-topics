@@ -71,6 +71,8 @@ In Korean, the sentence structure follows the subject-object-verb (S-O-V) paradi
 
 # Marking Particles
 
+For each marking particle, if the noun contains a 받침, use the first case, but if it does not, use the second case. 
+
 ## 은/는 - Topic
 
 The subject marking particle is used to denote a change in topic or a juxtaposition with another object.
@@ -79,7 +81,7 @@ The subject marking particle is used to denote a change in topic or a juxtaposit
 
 The topic marking particle is used to denote that the object that is being described. This is used in conjunction with an adjective.
 
-**Example**: 사과를 빨갛. [The apple is red.]
+**Example**: 사과를 빨간. [The apple is red.]
 
 ## 을/를 - Object
 
@@ -92,19 +94,9 @@ The object marking particle is used to denote the object that is being acted on.
 
 Depending on the formality if the situation, you replace the infinitive verb (V) form by dropping 다 in V다 with the corresponding formality level.
 
-## Present Tense
+## Contracting Vowels
 
-Present tense is used to show an action that is currently or permanently occurring. For example, eat (먹) or go (가).
-
-| Formality | Conjugation |
-| --------- | ----------- |
-| Casual | V + 아/어 |
-| Polite Low | V + 아요/어요
-| Polite High | V + ㅂ/습니다
-
-### Vowel Ending Contractions
-
-If the verb ends in a vowel, it gets contracted.
+If the verb to be conjugated ends in a vowel, it can get contracted in some cases.
 
 ㅏ + 아 = ㅏ
 
@@ -115,6 +107,16 @@ If the verb ends in a vowel, it gets contracted.
 ㅣ + 어 = ㅕ
 
 ㅜ + 어 = 워
+
+## Present Tense
+
+Present tense is used to show an action that is currently or permanently occurring. For example, eat (먹) or go (가).
+
+| Formality | Conjugation |
+| --------- | ----------- |
+| Casual | V + 아/어 |
+| Polite Low | V + 아요/어요
+| Polite High | V + ㅂ/습니다
 
 ### Casual / Polite Low Rules
 
