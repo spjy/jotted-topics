@@ -81,13 +81,17 @@ The subject marking particle is used to denote a change in topic or a juxtaposit
 
 The topic marking particle is used to denote that the object that is being described. This is used in conjunction with an adjective.
 
-**Example**: 사과를 빨간. [The apple is red.]
+> #### Example – 사과를 빨간.
+> 
+> &#8594; The apple is red.
 
 ## 을/를 - Object
 
 The object marking particle is used to denote the object that is being acted on. This is usually used in conjunction with transitive verbs, or verbs that require an object to exist (e.g. love / 사랑하다).
 
-**Example**: 사과를 사랑해. [I love apples.]
+> #### Example – 사과를 사랑해.
+> 
+> &#8594; I love apples.
 
 
 # Verb Conjugation
@@ -200,7 +204,7 @@ Since 했어 is the most common, it is shortened to make it easier to say. There
 
 | Formality | Conjugation |
 | --------- | ----------- |
-| Casual | 해 |
+| Casual | 했 |
 | Polite Low | 했어요
 | Polite High | 헀습니다
 
@@ -234,7 +238,7 @@ Future tense expresses an action that will occur.
 
 If the verb stem ends with a consonant, use V을 + formality.
 
-| V | &#8594; | V았습니다 을
+| V | &#8594; | V을 + formality |
 | - | - | - |
 
 #### No 받침
@@ -243,3 +247,12 @@ If the verb stem ends with a verb, attach ㄹ to the verb stem ending block: V�
 
 | V | &#8594; | Vㄹ + formality |
 | - | - | - |
+
+# Adjective Conjugation
+
+Similar to conjugating verbs, simply take the adjective (A) stem, drop the 다. Then add ㄴ/은 based on the case:
+
+| 받침 | Conjugation |
+| --- | ----------- |
+| Yes | Aㄴ |
+| No | A은
