@@ -256,3 +256,11 @@ Similar to conjugating verbs, simply take the adjective (A) stem, drop the 다. 
 | --- | ----------- |
 | Yes | Aㄴ |
 | No | A은
+
+# Common Grammatical Forms
+
+## Can/Cannot - V수 있/없다
+## Want - V고 싶다
+## Need/Need not - 필요 있/없다
+## Should - V(으)ㄹ까요
+## Respect - V(으)세요
