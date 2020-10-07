@@ -34,8 +34,10 @@ Qualitative analysis of the transient response.
 ## Poles, Zeroes, System Response
 
 A system's response consists of the sum of:
-* Force Response
-* Natural Response
+
+$$c(t) = c_{\text{forced}}(t) + c_{\text{natural}}(t)$$
+
+The forced response consists of your input signal, whereas the natural response is what occurs in the system after the input.
 
 ## Poles
 
@@ -44,3 +46,34 @@ Poles of a transfer function cause it to become $\infty$ and also are any roots 
 ## Zeros
 
 Zeros of a transfer function cause it to become $0$ and also are any roots that the numerator and denominator share.
+
+## First Order System
+
+The step response of a first order system is characterized by:
+
+$$C(s) = R(s) G(s) = \frac{a}{s(s+a)}$$
+$$c(t) = 1 - e^{-at}$$
+$$c_{\text{forced}}(t) = 1$$
+$$c_{\text{natural}}(t) = -e^{-at}$$
+
+### Time Constant
+
+The time constant is the time for the natural response e^{-at} to decay to 37% of its initial value.
+
+$$\tau = \frac{1}{a}$$
+
+### Rise Time
+
+The rise time is the time to go from 0.1 $\rightarrow$ 0.9 of its final value.
+
+$$T_r = \frac{2.2}{a}$$
+
+### Settling Time
+
+The settling time is the time at which the signal remains within $\pm$ 2% of the final value.
+
+$$T_s = \frac{4}{a}$$
+
+## Second Order System
+
+
