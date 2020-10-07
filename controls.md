@@ -76,4 +76,9 @@ $$T_s = \frac{4}{a}$$
 
 ## Second Order System
 
+The step response of a second order system is:
+
+$$C(s) = G(s)R(s) = \frac{b}{s(s^2+as+b)}$$
+
+### Response Types
 
