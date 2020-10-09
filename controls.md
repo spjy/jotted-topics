@@ -3,6 +3,45 @@ header: Control Systems
 description: Analysis of preventing explosions.
 ---
 
+# Block Diagrams
+
+A block diagram can assist with visualizing relationships between multiple systems.
+
+### Signals
+
+A signal is represented by an arrow.
+
+$\xrightarrow{R(s)} \; \xrightarrow{C(s)} \text{}$
+
+### System
+
+A system is represented by a box.
+
+$$\xrightarrow{R(s)} 
+\fbox{
+    {
+      G(s)
+    }
+} \xrightarrow{C(s)} \text{}$$
+
+### Series
+
+Systems in series multiply together.
+
+$$C(s) = R_1(s) R_2(s) \cdots R_n(s)$$
+
+### Parallel
+
+Systems in parallel sum together.
+
+$$C(s) = R_1(s) + R_2(s) + \dots + R_n(s)$$
+
+### Feedback Loop
+
+Systems in a feedback loop is represented by:
+
+$$C(s) = \frac{G_{\text{open loop}}(s)}{1 \pm G_{\text{open loop}}(s)G_{\text{closed loop}}(s)}$$
+
 # Frequency Modeling
 
 ## Transfer Function
@@ -153,3 +192,9 @@ The poles are real and distinct.
 $$s_{1,2} = -\zeta w_n \pm w_n \sqrt{\zeta^2 - 1}$$
 
 ### Dominant Pole Analysis 
+
+# Stability
+
+A system is said to be stable if all bounded inputs yield a bounded output.
+
+For an LTI system, it is stable if the natural response $\rightarrow$ 0 as $t \rightarrow \infty$.
