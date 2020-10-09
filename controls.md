@@ -198,3 +198,27 @@ $$s_{1,2} = -\zeta w_n \pm w_n \sqrt{\zeta^2 - 1}$$
 A system is said to be stable if all bounded inputs yield a bounded output.
 
 For an LTI system, it is stable if the natural response $\rightarrow$ 0 as $t \rightarrow \infty$.
+
+# Steady State Error
+
+Steady state error is the error left when the steady state dies out. In other words, it is the difference between the input and output for a certain input as $t \rightarrow \infty$.
+
+For a closed loop feedback system:
+
+$$\frac{E(s)}{R(s)} = \frac{1}{1+G(s)} \implies E(s) = \frac{R(s)}{1+G(s)}$$
+
+## Final Value Theorem
+
+The steady state error for the above system is:
+
+$$e(\infty) = \lim_{t \rightarrow 0} e(t) = \lim_{s \rightarrow 0} E(s)$$
+
+Assuming $\frac{1}{1+G(s)}$ is stable:
+
+$$e(\infty) = \lim_{s \rightarrow 0} s \frac{R(s)}{1+G(s)}$$
+
+## System Type
+
+A system $G(s)$ is said to be type $n$ if there are $n$ poles at the origin.
+
+$$G(s) = \frac{N(s)}{s^n Q(s)}$$
