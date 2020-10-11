@@ -82,9 +82,13 @@ The forced response consists of your input signal, whereas the natural response 
 
 Poles of a transfer function cause it to become $\infty$ and also are any roots that the numerator and denominator share.
 
+They affect the type of response (e.g. sinusoidal or exponential).
+
 ## Zeros
 
 Zeros of a transfer function cause it to become $0$ and also are any roots that the numerator and denominator share.
+
+They affect the amplitude of the response.
 
 ## First Order System
 
@@ -191,13 +195,35 @@ The poles are real and distinct.
 
 $$s_{1,2} = -\zeta w_n \pm w_n \sqrt{\zeta^2 - 1}$$
 
-### Dominant Pole Analysis 
+## Higher Order Transfer Functions
+
+First or second order transfer functions with no zeros cannot be applied to higher order ones. We can apply dominant pole analysis if certain conditions are met.
+
+### Dominant Pole Analysis
+
+The idea behind dominant pole analysis is that the further a pole is from the imaginary axis, the faster the pole decays; therefore, it has less of an effect it has on the overall response.
+
+As a result, we can use the appropriate formulae depending on the number of poles and the precision desired.
+
+#### Zeros Analysis
+
+The closer the zero is to the dominant poles, the more effect it has on the response.
+
+As the zero becomes further from the dominant poles, it approaches that of a two pole system.
+
+If the zero is on the right half plane, the 
 
 # Stability
 
 A system is said to be stable if all bounded inputs yield a bounded output.
 
 For an LTI system, it is stable if the natural response $\rightarrow$ 0 as $t \rightarrow \infty$.
+
+Poles that appear in the left hand, real plane are considered stable because they converge to zero, whereas those that lie on the left hand, complex plane often explode and diverge.
+
+## Relative Stability
+
+A transfer function is relatively stable with stability margin if the distance of the poles are at least $\sigma$ from the imaginary plane.
 
 # Steady State Error
 
