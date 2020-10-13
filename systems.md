@@ -64,6 +64,73 @@ $$g(t_0) = \int_{-\infty}^\infty \delta(t-t_0) g(t) dt$$
 $$g(0) = \lim_{\epsilon \to 0} \int_{-\infty}^\infty \frac{1}{\epsilon} \text{rect}\Big(\frac{t}{\epsilon}\Big) g(t) dt$$
 $$\delta (t) = \lim_{\epsilon \to 0} \frac{1}{\epsilon} \text{rect}\Big(\frac{t}{\epsilon}\Big)$$
 
+## Continuous Time System Properties
+
+### Linear System
+
+$$x_i(t) \to 
+\fbox{
+    {
+      L
+    }
+} \to y_i(t) \ \to \ \displaystyle \sum_{i = 1}^N c_i x_i(t) \to
+\fbox{
+    {
+      L
+    }
+} \to \displaystyle \sum_{i = 1}^N c_i y_i(t)$$
+
+### Time Invariant
+
+$$x(t) \to 
+\fbox{
+    {
+      TI
+    }
+} \to y(t) \ \to \ \displaystyle x(t-\tau) \to
+\fbox{
+    {
+      TI
+    }
+} \to y(t-\tau)$$
+
+### Linear & Time Invariant (LTI) Response
+
+$$x_i(t) \to 
+\fbox{
+    {
+      LTI
+    }
+} \to y_i(t) \ \to \ \displaystyle \sum_{i = 1}^N c_i x_i(t-\tau) \to
+\fbox{
+    {
+      LTI
+    }
+} \to \displaystyle \sum_{i = 1}^N c_i y_i(t-\tau)$$
+
+In other words, $y(t) \Big \{ x(t-\tau) \Big \} = y(t-\tau) \Big \{ x(t-\tau) \Big \} \text{}$
+
+### Impulse Response
+
+$$\delta(t-\tau) \to 
+\fbox{
+    {
+      LTI
+    }
+} \to y(t) = h(t-\tau)$$
+
+### Convolution
+
+$$y(t) = \int_{-\infty}^\infty x(\tau) h(t-\tau) d\tau = x(t) * h(t)$$
+
 # 2D Systems
 
 ## Continuous Space Fourier Transform 
+
+$$F(u,v) = \int_{-\infty}^\infty \int_{-\infty}^\infty f(x,y) e^{-i2\pi(ux+vy)} \text{d}x\text{d}y$$
+
+$$f(x,y) = \int_{-\infty}^\infty \int_{-\infty}^\infty F(u,v) e^{i2\pi(ux+vy)} \text{d}u\text{d}v$$
+
+## Continuous Space Signals
+
+
