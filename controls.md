@@ -141,7 +141,7 @@ $$s_{1,2} = -\zeta w_n \pm w_n \sqrt{\zeta^2 - 1}$$
 
 ### Rise Time
 
-See [rise time](#rise-time).
+The rise time is the time to go from 0.1 $\rightarrow$ 0.9 of its final value.
 
 $$T_r = \frac{\pi - \tan^{-1}\frac{\sqrt{1-\zeta^2}}{\zeta}}{\omega_n (1-\zeta)}$$
 
@@ -155,11 +155,11 @@ $$T_p = \frac{\pi}{\omega_n \sqrt{1-\zeta^2}}$$
 
 The percent overshoot is how much the waveform overshoots the steady state value. It is the difference between the peak and the steady state value, expressed in terms of a percentage.
 
-$$OS = e^{-(\zeta \pi / \sqrt{1-\zeta^2})}$$
+$$\%OS = e^{-(\zeta \pi / \sqrt{1-\zeta^2})} \cdot 100$$
 
 ### Settling Time 
 
-See [settling time](#settling-time).
+The settling time is the time at which the signal remains within $\pm$ 2% of the final value.
 
 $$T_s = \frac{4}{\zeta \omega_n}$$
 
@@ -233,11 +233,15 @@ For a closed loop feedback system:
 
 $$\frac{E(s)}{R(s)} = \frac{1}{1+G(s)} \implies E(s) = \frac{R(s)}{1+G(s)}$$
 
+where
+
+$$$$
+
 ## Final Value Theorem
 
 The steady state error for the above system is:
 
-$$e(\infty) = \lim_{t \rightarrow 0} e(t) = \lim_{s \rightarrow 0} E(s)$$
+$$e(\infty) = \lim_{t \rightarrow \infty} e(t) = \lim_{s \rightarrow 0} s E(s)$$
 
 Assuming $\frac{1}{1+G(s)}$ is stable:
 
@@ -247,4 +251,30 @@ $$e(\infty) = \lim_{s \rightarrow 0} s \frac{R(s)}{1+G(s)}$$
 
 A system $G(s)$ is said to be type $n$ if there are $n$ poles at the origin.
 
-$$G(s) = \frac{N(s)}{s^n Q(s)}$$
+$$G(s) = \frac{N(s)}{s^n Q(s)}, n \in \mathbb Z$$
+
+## Error Constants
+
+### Position Error Constant 
+
+$$K_p = \lim_{s \to 0} G(s) = \begin{cases}
+G(0) & n = 0 \\
+\infty & n \geq 1
+\end{cases}$$
+
+### Velocity Error Constant
+
+$$K_v = \lim_{s \to 0} s G(s) = \begin{cases}
+0 & n = 0 \\
+\frac{N(0)}{Q(0)} & n = 1 \\
+\infty & n \geq 2
+\end{cases}$$
+
+### Acceleration Error Constant
+
+$$K_a = \lim_{s \to 0} s^2 G(s) = \begin{cases}
+0 & n = 0, 1 \\
+\frac{N(0)}{Q(0)} & n = 2 \\
+\infty & n \geq 3
+\end{cases}$$
+
