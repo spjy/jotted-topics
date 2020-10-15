@@ -143,7 +143,7 @@ $$s_{1,2} = -\zeta w_n \pm w_n \sqrt{\zeta^2 - 1}$$
 
 The rise time is the time to go from 0.1 $\rightarrow$ 0.9 of its final value.
 
-$$T_r = \frac{\pi - \tan^{-1}\frac{\sqrt{1-\zeta^2}}{\zeta}}{\omega_n (1-\zeta)}$$
+$$T_r = \frac{\pi - \tan^{-1}\frac{\sqrt{1-\zeta^2}}{\zeta}}{\omega_n \sqrt{1-\zeta}}$$
 
 ### Peak Time
 
@@ -151,11 +151,19 @@ The peak time is the time to reach the maximum.
 
 $$T_p = \frac{\pi}{\omega_n \sqrt{1-\zeta^2}}$$
 
+#### Damped Frequency of Oscillation
+
+$$w_d \triangleq \omega_n \sqrt{1-\zeta^2}$$
+
 ### Percent Overshoot
 
 The percent overshoot is how much the waveform overshoots the steady state value. It is the difference between the peak and the steady state value, expressed in terms of a percentage.
 
 $$\%OS = e^{-(\zeta \pi / \sqrt{1-\zeta^2})} \cdot 100$$
+
+We can derive the damping frequency from the $\%OS$.
+
+$$\zeta = \frac{-\ln(\%OS / 100)}{\sqrt{\pi^2 + \ln^2(\%OS/100)}}$$
 
 ### Settling Time 
 
@@ -262,6 +270,10 @@ G(0) & n = 0 \\
 \infty & n \geq 1
 \end{cases}$$
 
+For a step input $\frac{1}{s}$:
+
+$$e(\infty) = \frac{1}{1+K_p}$$
+
 ### Velocity Error Constant
 
 $$K_v = \lim_{s \to 0} s G(s) = \begin{cases}
@@ -269,6 +281,10 @@ $$K_v = \lim_{s \to 0} s G(s) = \begin{cases}
 \frac{N(0)}{Q(0)} & n = 1 \\
 \infty & n \geq 2
 \end{cases}$$
+
+For a ramp input $\frac{1}{s^2}$:
+
+$$e(\infty) = \frac{1}{K_v}$$
 
 ### Acceleration Error Constant
 
@@ -278,3 +294,6 @@ $$K_a = \lim_{s \to 0} s^2 G(s) = \begin{cases}
 \infty & n \geq 3
 \end{cases}$$
 
+For a parabolic input $\frac{1}{s^3}$:
+
+$$e(\infty) = \frac{1}{K_a}$$
