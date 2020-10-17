@@ -227,7 +227,30 @@ A system is said to be stable if all bounded inputs yield a bounded output.
 
 For an LTI system, it is stable if the natural response $\rightarrow$ 0 as $t \rightarrow \infty$.
 
-Poles that appear in the left hand, real plane are considered stable because they converge to zero, whereas those that lie on the left hand, complex plane often explode and diverge.
+Poles that appear in the left hand (of the $j\omega$ axis), real plane are considered stable because they converge and decay, whereas those that lie on the right hand, complex plane explode and diverge.
+
+At least one pole on the right hand plane is enough to throw the system into instability since it diverges.
+
+## Routh-Hurwitz Criterion
+
+Given a closed loop transfer function:
+
+$$\frac{N(s)}{a_n s^n + a_{n-1} s^{n-1} + a_{n-2} s^{n-2} + a_{n-3} s^{n-3} + \dots + a_1 s + a_0}$$
+
+The corresponding Routh table is:
+
+||||||
+|-|-|-|-|-|
+| $s^{n} \text{}$ | $a_n$ | $a_{n-2} \text{}$ | $\dots$ | $a_1$ | $0$ |
+| $s^{n-1} \text{}$ | $a_{n-1} \text{}$ | $a_{n-3} \text{}$ | $\dots$ | $a_0$ | $0$ |
+| $s^{n-2} \text{}$ | $-\frac{1}{a_{n-1}} \begin{vmatrix} a_n & a_{n-2} \\ a_{n-1} & a_{n-3} \end{vmatrix} \text{}$ | $-\frac{1}{a_{n-1}} \begin{vmatrix} a_{n-2} & a_{n-4} \\ a_{n-3} & a_{n-5} \end{vmatrix} \text{}$
+| $\vdots$ | $\vdots$ | $\vdots$ | 
+| $s^1$ |
+| $s^0$ |
+
+From this table, we can deduce that the number of roots of the polynomial that are in the right half plane is equal to the number of sign changes in the first column.
+
+In other words, the first column must contain all positive values in order for the system to be stable.
 
 ## Relative Stability
 
@@ -297,3 +320,7 @@ $$K_a = \lim_{s \to 0} s^2 G(s) = \begin{cases}
 For a parabolic input $\frac{1}{s^3}$:
 
 $$e(\infty) = \frac{1}{K_a}$$
+
+## Root Locus
+
+Root Locus is a tool used to analyze a varied gain factor $K \in [0, \infty)$ in a closed loop system.
