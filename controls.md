@@ -121,7 +121,7 @@ $$T_s = \frac{4}{a}$$
 
 The step response of a second order system is:
 
-$$C(s) = G(s)R(s) = \frac{\omega_n^2}{s(s^2+2\zeta s+\omega_n^2)}$$
+$$C(s) = G(s)R(s) = \frac{\omega_n^2}{s(s^2+2\zeta w_n s+\omega_n^2)}$$
 
 ### Natural Frequency $\omega_n$
 
