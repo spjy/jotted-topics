@@ -323,4 +323,97 @@ $$e(\infty) = \frac{1}{K_a}$$
 
 ## Root Locus
 
-Root Locus is a tool used to analyze a varied gain factor $K \in [0, \infty)$ in a closed loop system.
+Root Locus is a tool used to analyze a the effect of a varied gain factor $\forall K \in [0, \infty)$ on the transient response of a closed loop feedback control system. In other words, it shows the paths of the closed loop poles as the gain varies.
+
+We can see the various pole locations in the complex plane. Poles on the LHP correspond to exponential decay, while those on the RHP correspond the exponential growth. Additionally, those that have a complex component to it come in pairs. On the imaginary axis, the poles correspond to a higher frequency of the wave. A combination of both the real and imaginary components corresponds to exponential and sinusoidal motion.
+
+Therefore, we can determine values of K such that our system is stable using this analysis tool.
+
+Only the poles dictate the natural response of the system.
+
+### Properties
+
+For a closed loop transfer function of the form
+
+$$T(s) = \frac{Y(s)}{R(s)} = \frac{KG(s)}{1+KG(s)H(s)}$$
+
+#### Pole Locations
+
+The pole locations are given by setting the characteristic polynomial of the denominator to zero
+
+$$KG(s)H(s) = 0 \implies KG(s)H(s)=-1=1 \angle 180 ^{\circ} (2k+1), k\in\mathbb{Z}$$
+
+#### Magnitude Criterion
+
+The magnitude criterion is given by:
+
+$$|KG(s)H(s)| = 1$$
+
+For any point $s$ on the root locus, this equality must be satisfied.
+
+#### Angle Criterion
+
+The angle criterion is given by:
+
+$$\angle KG(s)H(s) = (2k+1) 180 ^{\circ}$$
+
+For any point $s$ on the root locus, this equality must be satisfied.
+
+#### Gain Factor
+
+The gain factor is given by:
+
+$$K=\frac{1}{|G(s)H(s)|}$$
+
+## Poles and Zeros
+
+We take the open loop transfer function, $\displaystyle G(s)H(s) = \frac{K (s+z_1) \cdots (s+z_m)}{(s+p_1) \cdots (s+p_n)}$, and take the open loop poles and zeros and plot them on the complex plane.
+
+## Asymptotes
+
+These equations define the behavior of the root locus at infinity.
+
+### Real Axis Intercept / Point of Intersection
+
+$\sigma_a$ is the point at which the asymptotes converge.
+
+$$\sigma_a = \frac{\sum (-p_i) - \sum (-z_i)}{n-m}$$
+
+### Real Axis Angle
+
+$$\angle s+\alpha = \frac{\pm 180 ^\circ (2k+1)}{n - m}$$
+
+## Real Axis Breakway and Break-in Points
+
+Breakaway and break-in points are where the root locus departs from the real axis. 
+
+The locus leaves the axis at $-\sigma_1$ and enters back at $\sigma_2$.
+
+The branches of the root locus form an angle of $180 ^\circ / n$, $n$ is the number of closed loop poles departing from or arriving at a breakaway/in point.
+
+The breakway/in points can be solved via the following methods:
+
+### Without Differentiation
+
+$$\sum_1^m \frac{1}{\sigma+z_i} = \sum_1^n \frac{1}{\sigma+p_i}$$
+
+and solve for the roots.
+
+### With Differentiation
+
+$$\frac{dN}{d\sigma}D-N\frac{dD}{d\sigma} = 0$$
+
+and solve for the roots.
+
+## $j\omega$ Axis Crossing
+
+Solve for the roots of the following:
+
+$$(s+p_1) \dots (s+p+n) + K (s+z_1) \dots (s+z_n) \big |_{s=j\omega} = 0$$
+
+## Angle of Departure
+
+$$\angle(s+p_\theta) = 180 ^\circ + \sum_{i=1}^m \angle (s-z_i) + \sum_{i=1}^n \angle (s-p_i)$$
+
+
+
