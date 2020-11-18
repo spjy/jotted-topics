@@ -121,7 +121,7 @@ $$T_s = \frac{4}{a}$$
 
 The step response of a second order system is:
 
-$$C(s) = G(s)R(s) = \frac{\omega_n^2}{s(s^2+2\zeta w_n s+\omega_n^2)}$$
+$$C(s) = G(s)R(s) = \frac{\omega_n^2}{s(s^2+2\zeta \omega_n s+\omega_n^2)}$$
 
 ### Natural Frequency $\omega_n$
 
@@ -264,10 +264,6 @@ For a closed loop feedback system:
 
 $$\frac{E(s)}{R(s)} = \frac{1}{1+G(s)} \implies E(s) = \frac{R(s)}{1+G(s)}$$
 
-where
-
-$$$$
-
 ## Final Value Theorem
 
 The steady state error for the above system is:
@@ -331,7 +327,7 @@ Therefore, we can determine values of K such that our system is stable using thi
 
 Only the poles dictate the natural response of the system.
 
-### Properties
+### Properties of Negaitve Feedback System
 
 For a closed loop transfer function of the form
 
@@ -349,13 +345,15 @@ The magnitude criterion is given by:
 
 $$|KG(s)H(s)| = 1$$
 
-For any point $s$ on the root locus, this equality must be satisfied.
+For any point $s$ on the root locus, this equality must be satisfied. Thus, the root locus exists to the left of an odd number of real-axis, finite open-loop poles/zeros.
 
 #### Angle Criterion
 
 The angle criterion is given by:
 
 $$\angle KG(s)H(s) = (2k+1) 180 ^{\circ}$$
+
+$$\sum_{i=1}^n \angle (s+p_i) + \sum_{i=1}^m \angle (s+z_i) = \pm 180 ^\circ (2k+1)$$
 
 For any point $s$ on the root locus, this equality must be satisfied.
 
@@ -375,11 +373,13 @@ These equations define the behavior of the root locus at infinity.
 
 ### Real Axis Intercept / Point of Intersection
 
-$\sigma_a$ is the point at which the asymptotes converge.
+$\sigma_a$ is the point on the real axis at which the asymptotes depart.
 
-$$\sigma_a = \frac{\sum (-p_i) - \sum (-z_i)}{n-m}$$
+$$\sigma_a = \frac{\sum_i p_i - \sum_i -z_i}{n-m}$$
 
 ### Real Axis Angle
+
+The real axis angle is the angle from the real axis intercept that the intercepts converge at.
 
 $$\angle s+\alpha = \frac{\pm 180 ^\circ (2k+1)}{n - m}$$
 
@@ -395,7 +395,7 @@ The breakway/in points can be solved via the following methods:
 
 ### Without Differentiation
 
-$$\sum_1^m \frac{1}{\sigma+z_i} = \sum_1^n \frac{1}{\sigma+p_i}$$
+$$\sum_{i=1}^m \frac{1}{\sigma+z_i} = \sum_{i=1}^n \frac{1}{\sigma+p_i}$$
 
 and solve for the roots.
 
@@ -409,11 +409,29 @@ and solve for the roots.
 
 Solve for the roots of the following:
 
-$$(s+p_1) \dots (s+p+n) + K (s+z_1) \dots (s+z_n) \big |_{s=j\omega} = 0$$
+$$\sum_{i=1}^n (s+p_i) + K \sum_{i=1}^m (s+z_i) \big |_{s=j\omega} = 0$$
 
 ## Angle of Departure
 
-$$\angle(s+p_\theta) = 180 ^\circ + \sum_{i=1}^m \angle (s-z_i) + \sum_{i=1}^n \angle (s-p_i)$$
+The angle of departure is the angle at which the root locus departs from a point. Use the angle criterion and solve for the angle that you are looking for.
+
+$$\sum_{i=1}^n \angle (s+p_i) + \sum_{i=1}^m \angle (s+z_i) = \pm 180 ^\circ (2k+1)$$
 
 
+## Properties of Positive Feedback System
 
+Given a positive feedback system
+
+$$T(s) = \frac{K G(s)}{1-KG(s)H(s)}$$
+
+### Magnitude and Angle Criteron
+
+$$KG(s)H(s) = 1 = 1 \angle k360 ^\circ$$
+
+the root locus exists to the left of an even number of real-axis, finite open-loop poles/zeros.
+
+### Asymptotes
+
+$$\sigma_a = \frac{\sum_i p_i - \sum_i -z_i}{n-m}$$
+
+$$\angle s+\alpha = \frac{\pm 360 ^\circ (2k+1)}{n - m}$$
